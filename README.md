@@ -1,17 +1,19 @@
-# Thema des Kapitels
+# Operatoren, Bedingungen und Schleifen
 
 ## Lernziele
-Der Teilnehmer/die Teilnehmerin kann nach erfolgreicher Absolvierung dieses Themas:
-- das Thema erklären
-- das Thema anwenden, indem ein 
-- seinen/ihren Code erklären
-- seinen Code in GitHub einchecken
+Die Teilnehmer\*innen können nach erfolgreicher Absolvierung dieses Themas:
+- erklären, was arithmetische und logische Operatoren sind
+- erklären, was Bedingungen sind und wie diese funktionieren
+- erklären, wo im Code eine Variable deklariert werden muss, damit sie überall dort erreichbar ist, wo sie benötigt wird
+- erklären, was Schleifen sind und wie diese funktionieren
+- Operatoren, Bedingungen und Schleifen in ihren Programmen anwenden
 
 ## Inhaltsverzeichnis
 
-1. [1. Kapitel - Beispiele in Markdown](chapter1.md)
-2. [2. Kapitel - Beispiel eines 2. Kapitels](chapter2.md)
+1. [Aufgabenstellung](./00-taskdefinition.md)
+1. [arithmetische und logische Operatoeren](./01-operators.md)
+1. [bedingte Ausführung](./02-conditions.md)
+1. [Erriechbarkeit von Variablen](./03-scope-of-variables.md)
+1. [Codeteile wiederholen mit Schleifen](./04-loops.md)
 
-## Referenzen
-
-Hier kommt eine Liste von Links zu weiterführenden Inhalten (zB spezifische Inhalte, worauf man speziell achten muss, oder Inhalte, welche sich die Teilnehmer nur optional anschauen)
+Dieses Kapitel fängt mit einer Aufgabenstellung und bietet in den anschließenden Kapiteln die nötigen Inhalte, um diese Aufgaben zu lösen.
