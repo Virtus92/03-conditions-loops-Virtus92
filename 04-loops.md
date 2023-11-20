@@ -22,11 +22,11 @@ Wir schreiben ein kleines Programm, das den\*die Benutzer\*in auffordert, eine Z
 ```Java
 public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
-    int number = scanner.nextInt();
+    int maxNumber = scanner.nextInt();
 
-    System.out.print("Die geraden Zahlen von 0 bis " + number + " lauten: ");
+    System.out.print("Die geraden Zahlen von 0 bis " + maxNumber + " lauten: ");
 
-    for (int i = 0; i <= number; i = i + 2){ // "int i = 0" ist der Startwert von der Variable i, "i <= number" bedeutet, dass die for-Schleife aufhören soll, wenn i größer oder gleich number ist, "i = i + 2" heißt, dass bei jeder Iteration i um 2 erhöht wird.
+    for (int i = 0; i <= maxNumber; i = i + 2){ // "int i = 0" ist der Startwert von der Variable i, "i <= number" bedeutet, dass die for-Schleife aufhören soll, wenn i größer oder gleich number ist, "i = i + 2" heißt, dass bei jeder Iteration i um 2 erhöht wird.
         System.out.print(i + ", ");
     }
 }
