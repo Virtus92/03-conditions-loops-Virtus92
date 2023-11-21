@@ -31,7 +31,7 @@ Hint: You might find the modulo operation helpful for the first two exercises.
 #### Abnahmekriterien
 
 - die Benutzer\*innenführung ist klar
-- der Variablenname sind aussagekräftig
+- die Variablennamen sind aussagekräftig
 - das Programm funktioniert und entspricht den Anforderungen
 - der\*die Teilnehmer\*in ist in der Lage sein\*ihr Programm zu erklären
 
