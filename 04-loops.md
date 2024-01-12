@@ -1,13 +1,13 @@
 # Schleifen
 
-In einem Programm kann es sinnvoll sein, denselben Codeteil zu wiederholen. Das erspart dem Entwickler, denselben Code x Mal zu schreiben. Außerdem ist oft zum Zeitpunkt der Code-Erstellung oft noch nicht klar, wie oft ein Codeteil ausgeführt werden soll. 
+In einem Programm kann es sinnvoll sein, denselben Codeteil zu wiederholen. Stellen Sie sich vor, das Programm verwaltet eine Liste von Teilnehmenden eines Kurses und muss für jeden davon das Startdatum des Kurses eintragen. Das Programm müsste so oft dasselbe machen, wie es Teilnehmende gibt. Ohne die Möglichkeit Codeteile mehrfach mit unterschiedliche Eingangsdaten auszuführen, müsste man denselben Code nur mit ein Paar geänderten Werten mehrfach schreiben. Dies ist aufwendig, ist für die Codepflege sehr mühsam (bei jeder Änderung des Codes, muss die Änderung an vielen Stellen geändert werden) und oft ist zum Zeitpunkt der Code-Erstellung oft noch nicht klar, wie oft ein Codeteil ausgeführt werden soll. 
 
-Um diese Aufgabe bieten höhere Programmiersprachen sogenannte Schleifen. In der Regel werden die 4 folgenden Arten angeboten:
-- wenn die Anzahl der Iterationen vorm Start der Schleife bekannt ist: ***für (<start>; <Ende-Bedingung>; <Inkrementer>)***
-- wenn es sich um ein Objekt handelt, der eine definiterte Anzahl an Elementen beinhaltet, der vollständig durchlaufen werden soll, z.B. eine Liste: ***für jedes(<Element> in <Objekt>)***
+Um diese Aufgabe zu lösen bieten höhere Programmiersprachen sogenannte Schleifen. In der Regel werden die 4 folgenden Arten von Schleifen angeboten:
+- wenn die Anzahl der Iterationen vorm Start der Schleife bekannt ist: ***für (<start>; <Ende-Bedingung>; <Inkrementer>)***, wobei ***<start>*** der erste Wert der Wiederholungen darstellt, ***<Ende-Bedingung>*** der letzte Wert der Wiederholung und ***<Inkrementer>*** ist die Formel, wie sich der Wert bei jeder Iteration ändern soll, um irgendwann die ***<Ende-Bedingung>*** zu erreichen.
+- wenn es sich um eine Liste handelt, der eine definiterte Anzahl an Elementen beinhaltet, der vollständig durchlaufen werden soll, z.B. eine Liste: ***für jedes(<Listenelement> in <Liste>)***
 - wenn es sich um einen Codeteil handelt, der so oft wiederholt werden soll, bis eine Bedingung erfüllt ist. Hier stehen uns 2 Varianten zur Verfügung:
-  - wenn der Codeteil mindestens einmal ausgeführt werden muss: ***führe durch <Anweisungen> solange <Bedingung>***
-  - wenn die Bedingung zuerst geprüft werden muss, bevor der Codeteil ausgeführt wird (also kann es sein, dass der Codeteil kein einziges Mal ausgeführt wird): ***Solange <Bedingung> führe durch <Anweisungen>***
+  - wenn der Codeteil mindestens einmal ausgeführt werden muss: ***führe folgende <Anweisungen> durch, solange <Bedingung> erfüllt ist***. Hier werden die Anweisungen mindestens 1 Mal ausgeführt.
+  - wenn die Bedingung zuerst geprüft werden muss, bevor der Codeteil ausgeführt wird (also kann es sein, dass der Codeteil kein einziges Mal ausgeführt wird): ***Solange <Bedingung> erfüllt ist, führe folgende <Anweisungen> durch***
 
 ## führe <Anweisungen> <x> Mal durch
 

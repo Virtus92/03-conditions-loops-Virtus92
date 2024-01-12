@@ -1,6 +1,12 @@
 # Bedingungen
 
-Sehr häufig müssen wir in unseren Programmen überprüfen, ob eine Bedingung erfüllt ist. Dies kann auf verschiedenen Art und Weisen erfolgen. Einerseits mit einem klassischen if ... then ... else ... (Wenn Bedingung erfüllt, dann tue dies und sonst tue das). In speziellen Fälle kann man switch ... case ... break verwenden
+Programme sind nicht nur eine Folge von Tätigkeiten. In manchen Fällen müssen aufgrund von Parametern (In der Softwareentwicklung werden die Parameter Variablen genannt) Entscheidungen getroffen werden, um zu definieren, wie der weitere Verlauf des Programms sein soll. Zum Beispiel:
+- Wenn der Angestellte Herr Müller weniger als 1500€ Brutto im Monat verdient, hat er Anspruch auf eine Förderung. So wird im Anschluss die Auszahlung der Förderung angestossen.
+- Wenn die Familie Mayer weniger als 3000€ monatliches Gesamteinkommen hat, hat sie Anspruch auf Wohnbeihilfe. So wird der Ablauf zur Auszahlung der Wohnbeihilfe genehmigt.
+- usw. 
+Entscheidungen können in einem Programm auf verschiedene Art und Weisen erfolgen. 
+  - Einerseits mit einem klassischen if ... then ... else ... (Wenn Bedingung erfüllt, dann tue dies und sonst tue das). 
+  - In speziellen Fälle kann man switch ... case ... break verwenden
 
 ## Wenn *Bedingung erfüllt*, dann *tue dies* sonst *tue das*
 
