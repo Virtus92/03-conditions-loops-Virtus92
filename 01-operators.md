@@ -1,52 +1,107 @@
 # Operatoren
 
-In der Softwareentwicklung werden Operatoren verwendet, um Operationen, Vergleiche, usw. zwischen Variablen oder Werten zu ermöglichen. Man unterscheidet zwischen arithmetischen Operatoren und logischen Operatoren: 
+In der Softwareentwicklung werden Operatoren verwendet, um Operationen und Vergleiche zwischen Variablen oder Werten zu ermöglichen. Man unterscheidet zwischen arithmetischen, relationalen und logischen Operatoren.
 
-## arithmetische Operatoren
+## Arithmetische Operatoren
 
 Mit arithmetischen Operatoren kann man mathematische Berechnungen durchführen:
 
-| Operator | Bedeutung                    |
-| ######## | ############################ |
-| +        | Addition                     |
-| -        | Subtraktion                  |
-| *        | Multiplikation               |
-| /        | Division                     |
+| Operator | Bedeutung                   |
+| -------- | --------------------------- |
+| +        | Addition                    |
+| -        | Subtraktion                 |
+| *        | Multiplikation              |
+| /        | Division                    |
 | %        | Modulo (Rest einer Division) |
 
-### Java 
+**Arithmetische Operatoren: Ein einfaches Lernbeispiel in Java und C#**
 
-```Java
-int a = 7;
-int b = 3;
-System.out.printf("%d + %d = %d \n", a, b, a + b);                  // 7 + 3 = 10 
-System.out.printf("%d - %d = %d \n", a, b, a - b);                  // 7 - 3 = 4 
-System.out.printf("%d + %d * %d = %d \n", a, b, b, a + b * b);      // 7 + 3 * 3 = 16 
-System.out.printf("(%d + %d) * %d = %d \n", a, b, b, (a + b) * b);  // (7 + 3) * 3 = 30 
-System.out.printf("%d %% %d = %d \n", a, b, a % b);                 // 7 % 3 = 1 
-System.out.printf("%d / %d = %d \n", a, b, a / b);                  // 7 / 3 = 2 
+In diesem Beispiel werden wir die arithmetischen Operatoren in den Programmiersprachen Java und C# kennenlernen. Arithmetische Operatoren werden verwendet, um mathematische Operationen durchzuführen, wie Addition, Subtraktion, Multiplikation und Division.
 
-double c = 7.0;
-double d = 3.0;
-System.out.printf("%.2f / %.2f = %.2f \n", c, d, c / d);            // 7,00 / 3,00 = 2,33
+### Java-Codebeispiel:
 
+```java
+        // Arithmetische Operatoren
+
+        // Variablen deklarieren und initialisieren
+        int a = 10;
+        int b = 5;
+
+        // Addition
+        int additionResult = a + b;
+        System.out.println("Addition: " + a + " + " + b + " = " + additionResult);
+
+        // Subtraktion
+        int subtractionResult = a - b;
+        System.out.println("Subtraktion: " + a + " - " + b + " = " + subtractionResult);
+
+        // Multiplikation
+        int multiplicationResult = a * b;
+        System.out.println("Multiplikation: " + a + " * " + b + " = " + multiplicationResult);
+
+        // Division
+        int divisionResult = a / b;
+        System.out.println("Division: " + a + " / " + b + " = " + divisionResult);
+
+        // Modulo (Rest der Division)
+        int moduloResult = a % b;
+        System.out.println("Modulo: " + a + " % " + b + " = " + moduloResult);
 ```
 
-### C#
+### C#-Codebeispiel:
 
-```c#
+```csharp
 
+        // Arithmetische Operatoren
+
+        // Variablen deklarieren und initialisieren
+        int a = 10;
+        int b = 5;
+
+        // Addition
+        int additionResult = a + b;
+        Console.WriteLine("Addition: " + a + " + " + b + " = " + additionResult);
+
+        // Subtraktion
+        int subtractionResult = a - b;
+        Console.WriteLine("Subtraktion: " + a + " - " + b + " = " + subtractionResult);
+
+        // Multiplikation
+        int multiplicationResult = a * b;
+        Console.WriteLine("Multiplikation: " + a + " * " + b + " = " + multiplicationResult);
+
+        // Division
+        int divisionResult = a / b;
+        Console.WriteLine("Division: " + a + " / " + b + " = " + divisionResult);
+
+        // Modulo (Rest der Division)
+        int moduloResult = a % b;
+        Console.WriteLine("Modulo: " + a + " % " + b + " = " + moduloResult);
 ```
 
-### Kurzschreibweisen
+### Erklärung:
 
-Manchmal möchte man den aktuellen das Ergebnis einer Operation mit einer Variable wieder in diese Variable hineinspeichern. Hierzu helfen uns Kurzschreibweisen. Diese funktionieren mit allen arithmetischen Operatoren:
+Beide Codebeispiele führen arithmetische Operationen mit den Variablen `a` und `b` durch und geben die Ergebnisse aus. Die Operatoren sind in beiden Sprachen ähnlich:
 
-#### Java 
+- **Addition (`+`):** Addiert die Werte von `a` und `b`.
+- **Subtraktion (`-`):** Subtrahiert den Wert von `b` von `a`.
+- **Multiplikation (`*`):** Multipliziert die Werte von `a` und `b`.
+- **Division (`/`):** Teilt den Wert von `a` durch `b`. Das Ergebnis ist eine Ganzzahl, da beide Variablen vom Typ `int` sind.
+- **Modulo (`%`):** Gibt den Rest der Division von `a` durch `b` zurück.
 
-```Java
-a = a + b; //Langschreibweise
-a += b; // Kurzschreibweise
+### Ausgabe:
+
+Wenn du diese Java- und C#-Codebeispiele ausführst, sollten die Ergebnisse der arithmetischen Operationen auf der Konsole angezeigt werden. Du kannst die Werte von `a` und `b` nach Belieben ändern und die Auswirkungen auf die Ergebnisse beobachten.
+
+## Kurzschreibweisen
+
+Kurzschreibweisen helfen, das Ergebnis einer Operation mit einer Variable wieder in diese Variable zu speichern. Diese funktionieren mit allen arithmetischen Operatoren:
+
+### Java Beispiel
+
+```java
+a = a + b; // Langschreibweise
+a += b;    // Kurzschreibweise
 
 a = a - b;
 a -= b;
@@ -67,99 +122,153 @@ a = a - 1;
 a--;
 ```
 
-#### C#
+### C# Beispiel
 
-```c#
+```csharp
+a = a + b; // Langschreibweise
+a += b;    // Kurzschreibweise
 
+a = a - b;
+a -= b;
+
+a = a * b;
+a *= b;
+
+a = a / b;
+a /= b;
+
+a = a % b;
+a %= b;
+
+a = a + 1;
+a++;
+
+a = a - 1;
+a--;
 ```
 
-## Vergleichsoperatoren
+## Relationale Operatoren (Vergleichsoperatoren)
 
-Weiters werden für Bedingungen sogenannten Vergleichsoperatoren benötigt. Diese kennen wir aus dem Mathematikunterricht:
+In der Programmierung werden relationale Operatoren verwendet, um Beziehungen zwischen Werten zu vergleichen. Diese Operatoren geben in der Regel einen booleschen Wert (`true` oder `false`) zurück.
+
+Hier sind die häufigsten relationalen Operatoren:
 
 | Operator | Bedeutung           |
-| ######## | ################### |
-| <        | Kleiner             |
-| >        | Größer              |
-| ==       | Gleich              |
-| !=       | Ungleich            |
-| <=       | Kleiner oder gleich |
-| >=       | Größer oder gleich  |
+| -------- | -------------------  |
+| `<`      | Kleiner             |
+| `>`      | Größer              |
+| `==`     | Gleich              |
+| `!=`     | Ungleich            |
+| `<=`     | Kleiner oder gleich |
+| `>=`     | Größer oder gleich  |
 
-#### Java 
+## Beispiel
 
-```Java
+Angenommen, wir haben zwei Variablen `a` und `b`, und wir wollen ihre Beziehung zueinander überprüfen.
+
+### Beispiel in Java
+
+```java
 int a = 5;
-int b = 6;
-int c = 5;
-System.out.printf("a == b is %s \n", a == b); // false
-System.out.printf("a == c is %s \n", a == c); // true
-System.out.printf("a != b is %s \n", a != b); // true
-System.out.printf("a != c is %s \n", a != c); // false
-System.out.printf("a < b is %s \n", a < b);   // true
-System.out.printf("a > b is %s \n", a > b);   // false
-System.out.printf("a < c is %s \n", a < c);   // false
-System.out.printf("a > c is %s \n", a > c);   // false
+int b = 8;
+
+boolean isALessThanB = a < b;     // true
+boolean isAGreaterThanB = a > b;  // false
+boolean areAAndBEqual = a == b;   // false
+boolean areANotEqualB = a != b;    // true
+boolean isALessThanOrEqualB = a <= b;  // true
+boolean isAGreaterThanOrEqualB = a >= b;  // false
 ```
 
-#### C#
+### Beispiel in C#
 
-```c#
+```csharp
+int a = 5;
+int b = 8;
 
+bool isALessThanB = a < b;     // true
+bool isAGreaterThanB = a > b;  // false
+bool areAAndBEqual = a == b;   // false
+bool areANotEqualB = a != b;    // true
+bool isALessThanOrEqualB = a <= b;  // true
+bool isAGreaterThanOrEqualB = a >= b;  // false
 ```
 
-## logische Operatoren
+Diese Operatoren sind wichtig, wenn Sie Bedingungen in Ihren Programmen erstellen möchten, wie zum Beispiel "Wenn `a` größer als `b` ist, dann mache etwas."
 
-Die letzten Operatoren, die wir benötigen, sind sogenannten logische Operatoren. Diese werden wir benötigen, wenn wir mehrere Bedingungen kombinieren wollen:
+## Logische Operatoren
 
-| Operator | Bedeutung                      |
-| ######## | ############################## |
-| &        | Und                            |
-| \|       | Oder                           |
-| ^        | Exklusives Oder                |
-| !        | Negation                       |
-| &&       | Und mit Kurzschlussauswertung  |
-| \|\|     | Oder mit Kurzschlussauswertung |
+Logische Operatoren werden verwendet, um Boolesche Werte zu kombinieren und Bedingungen zu erstellen, die auf mehreren Werten basieren. Die wichtigsten logischen Operatoren sind:
 
+- `&&` (Und)
+- `||` (Oder)
+- `!` (Negation)
 
-## Java 
+## Beispiel
 
-```Java
-boolean allEqualFull = a == b & a == c;
+Angenommen, wir haben zwei Boolesche Variablen `x` und `y`, und wir wollen logische Operationen mit ihnen durchführen.
 
-boolean allEqual = a == b && a == c; // ist a == b false kann allEqual bereits auf false gesetzt werden, ohne a == c zu prüfen
+### Beispiel in Java
 
-boolean anyEqualFull = a == b | a == c;
+```java
+boolean x = true;
+boolean y = false;
 
-boolean anyEqual = a == b || a == c; // ist a == b true kann anyEqual bereits mit true gesetzt werden, ohne a == c zu prüfen
+boolean andResult = x && y; // false
+boolean orResult = x || y;  // true
+boolean notResultX = !x;    // false
+boolean notResultY = !y;    // true
 ```
 
-## Ergebnisse von logische Operatoren
+### Beispiel in C#
 
-Wichtig ist es, sich zu merken, welche Operation wann true und wann false ausgibt:
+```csharp
+bool x = true;
+bool y = false;
 
-### a & b bzw. a && b
+bool andResult = x && y; // false
+bool orResult = x || y;  // true
+bool notResultX = !x;    // false
+bool notResultY = !y;    // true
+```
 
-| a \ b |  true  |  false  |
-| true  |  true  |  false  |
-| false |  false |  false  |
+## Ergebnisse von logischen Operatoren
 
-### a | b bzw. a || b
+Die Ergebnisse von logischen Operatoren können in sogenannten Wahrheitstabellen dargestellt werden.
 
-| a \ b |  true  |  false  |
-| true  |  true  |  true   |
-| false |  true  |  false  |
+## Wahrheitstabellen für logische Operatoren
 
-### a ^ b
+Hier folgen die Wahrheitstabellen für die logischen Operatoren "Und" (`&&`), "Oder" (`||`) und "Negation" (`!`):
 
-| a \ b |  true  |  false  |
-| true  |  false |  true   |
-| false |  true  |  false  |
+### "Und" (`&&`) Wahrheitstabelle
 
-### !a 
+| A     | B     | A && B |
+| ----- | ----- | ------- |
+| true  | true  | true    |
+| true  | false | false   |
+| false | true  | false   |
+| false | false | false   |
 
-| a     |  !a    |
-| true  |  false |
-| false |  true  |
+### "Oder" (`||`) Wahrheitstabelle
 
-Zurück zur [Startseite](README.md)
+| A     | B     | A \|\| B |
+| ----- | ----- | --------- |
+| true  | true  | true      |
+| true  | false | true      |
+| false | true  | true      |
+| false | false | false     |
+
+### "Negation" (`!`) Wahrheitstabelle
+
+| A     | !A    |
+| ----- | ----- |
+| true  | false |
+| false | true  |
+
+Diese Wahrheitstabellen zeigen die möglichen Ergebnisse der logischen Operatoren für alle Kombinationen der Eingabewerte `A` und `B`, sowie die Negation von `A`.
+### Bedeutung der Werte
+
+- `true`: Der Ausdruck ist wahr.
+- `false`: Der Ausdruck ist falsch.
+
+Die logischen Operatoren ermöglichen es, komplexe Bedingungen zu erstellen, indem mehrere Ausdrücke miteinander kombiniert werden. Zum Beispiel kann man sagen: "Wenn x wahr ist und y wahr ist, dann mache etwas."
