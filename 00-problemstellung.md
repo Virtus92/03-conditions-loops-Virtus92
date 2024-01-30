@@ -1,16 +1,15 @@
 # Problemstellung
 
-Bisher haben wir gelernt, wie Daten in unser Programm hinein- und hinauskommen, wie diese auch gespeichert werden können. Jetzt geht es darum, dass wir diese Daten verarbeiten können. 
+Bislang haben wir uns darauf konzentriert, wie Daten in unser Programm ein- und ausgegeben werden und wie sie gespeichert werden können. Nun geht es darum, diese Daten zu verarbeiten.
 
-Daten verarbeiten bedeutet, dass man mit den Daten etwas tut. Dafür benötigt es Operatoren. Angenommen, wir arbeiten mit Zahlen, dann müssen wir diese Daten zB addieren, substrahieren, dividieren oder multiplizieren können. 
+Die Datenverarbeitung beinhaltet verschiedene Operationen, die an den Daten durchgeführt werden müssen. Operatoren sind dabei unerlässlich. Wenn wir beispielsweise mit Zahlen arbeiten, müssen wir Additionen, Subtraktionen, Divisionen oder Multiplikationen durchführen können.
 
-So werden wir diese Operatoren in diesem Kapitel durchgehen. Aber nicht nur diese:
+In diesem Kapitel werden wir nicht nur die grundlegenden arithmetischen Operatoren behandeln, sondern auch:
 
-Bei der Verarbeitung von Daten, müssen in unseren Programmen immer wieder Entscheidungen getroffen werden. Z.B. gibt der Benutzer an, dass er ein Mann ist. Dann muss ich bei der Ausgabe berücksichtigen, dass es sich um einen Mann handelt und ihn mit "Sehr geehrter Herr ..." begrüßen. Würde es sich um eine Frau handeln, müsste ich sie mit "Sehr geehrte Frau ..." begrüßen. Hierfür braucht es sowohl Entscheidungsbefehle, aber auch Vergleichs- bzw. logische Operatoren.
+Bei der Datenverarbeitung müssen in unseren Programmen häufig Entscheidungen getroffen werden. Zum Beispiel könnte der Benutzer angeben, dass er männlich ist. In diesem Fall müssen wir bei der Ausgabe berücksichtigen, dass es sich um einen Mann handelt, und ihn mit "Sehr geehrter Herr ..." ansprechen. Wenn es sich um eine Frau handelt, wäre die passende Anrede "Sehr geehrte Frau ...". Hierbei kommen Entscheidungsanweisungen sowie Vergleichs- und logische Operatoren zum Einsatz.
 
-Wie man solche Entscheidungen im Code handhabt werden wir in diesem Kapitel lernen.
+In diesem Kapitel werden wir lernen, wie solche Entscheidungen im Code umgesetzt werden.
 
-Weiters ist es oft notwendig mit mehreren Werten dieselbe Verarbeitung durchzuführen. Hierfür macht es Sinn den bestehenden Code wiederholt anzuwenden, statt ihn x Mal zu schreiben. Abgesehen davon ist es zum Zeitpunkt als wir den Quellcode schreiben nicht immer klar, wieviele Wiederholungen es geben wird.
+Darüber hinaus ist es oft erforderlich, dieselbe Verarbeitung für mehrere Werte durchzuführen. In solchen Fällen ist es sinnvoll, bestehenden Code wiederholt anzuwenden, anstatt ihn mehrfach zu schreiben. Außerdem ist zum Zeitpunkt des Schreibens des Quellcodes nicht immer klar, wie oft eine Wiederholung erforderlich sein wird.
 
-Wie solche Wiederholungen in unseren Programmen erfolgen sollen, erklären wir auch in diesem Kapitel.
-
+In diesem Kapitel werden wir auch erklären, wie solche Wiederholungen in unseren Programmen umgesetzt werden sollen.
