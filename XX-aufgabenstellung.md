@@ -229,3 +229,5 @@ Schreibe ein kleines Programm, welches eine Liste von Zahlen über die Konsole z
 ***EN:***
 
 Provide a program that reads numbers from the console until it reads the letter 'q'. Calculate the maximum of all values and print it to the console.
+
+Zurück zur [Startseite](README.md)

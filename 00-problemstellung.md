@@ -13,3 +13,5 @@ In diesem Kapitel werden wir lernen, wie solche Entscheidungen im Code umgesetzt
 Darüber hinaus ist es oft erforderlich, dieselbe Verarbeitung für mehrere Werte durchzuführen. In solchen Fällen ist es sinnvoll, bestehenden Code wiederholt anzuwenden, anstatt ihn mehrfach zu schreiben. Außerdem ist zum Zeitpunkt des Schreibens des Quellcodes nicht immer klar, wie oft eine Wiederholung erforderlich sein wird.
 
 In diesem Kapitel werden wir auch erklären, wie solche Wiederholungen in unseren Programmen umgesetzt werden sollen.
+
+Zurück zur [Startseite](README.md)

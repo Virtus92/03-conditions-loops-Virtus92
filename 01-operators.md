@@ -295,3 +295,5 @@ Diese Wahrheitstabellen zeigen die möglichen Ergebnisse der logischen Operatore
 Die logischen Operatoren ermöglichen es, komplexe Bedingungen zu erstellen, indem mehrere Ausdrücke miteinander kombiniert werden. Zum Beispiel kann man sagen: "Wenn x wahr ist und y wahr ist, dann mache etwas."
 
 Im folgenden Kapitel lernen wir wie solche Bedingungen erstellt werden.
+
+Zurück zur [Startseite](README.md)
