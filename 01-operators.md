@@ -149,7 +149,7 @@ a--;
 
 ## Relationale Operatoren (Vergleichsoperatoren)
 
-In der Programmierung werden relationale Operatoren verwendet, um Beziehungen zwischen Werten zu vergleichen. Diese Operatoren geben in der Regel einen booleschen Wert (`true` oder `false`) zurück.
+In der Programmierung werden relationale Operatoren verwendet, um Werte zu vergleichen. Diese Operatoren geben in der Regel einen booleschen Wert (`true` oder `false`) zurück.
 
 Hier sind die häufigsten relationalen Operatoren:
 
@@ -198,10 +198,19 @@ Diese Operatoren sind wichtig, wenn Sie Bedingungen in Ihren Programmen erstelle
 
 ## Logische Operatoren
 
-Logische Operatoren werden verwendet, um Boolesche Werte zu kombinieren und Bedingungen zu erstellen, die auf mehreren Werten basieren. Die wichtigsten logischen Operatoren sind:
+Logische Operatoren werden verwendet, um Boolesche Werte zu kombinieren und Bedingungen zu erstellen, die auf mehreren Werten basieren. 
+
+Stellen wir uns vor, wir bieten den\*die Benutzer\*in Suchbegriffe in ein Suchfeld einzugeben. Wenn diese\*r mehrere Begriffe eingibt könnten wir definieren, dass:
+- entweder alle Begriffe enthalten sein müssen, so müssten wir den logischen Operator `&&` (Und) zwischen den Bedingungen verwenden
+- oder eines der Begriffe enthalten sein muss, so müssten wir den logischen Operator `||` (Oder) zwischen den Bedingungen verwenden
+- wenn nur eines der Begriffe enthalten sein muss, aber die anderen nicht wird der Operator `^` (exklusiv Oder) zwischen den Bedingungen verwendet
+- soll aber ein Begriff nicht enthalten sein, müssten wir den logischen Operator `!` (Negation) unmittelbar vor der Bedingung verwenden
+
+Hier nochmals die wichtigsten logischen Operatoren aufgezählt:
 
 - `&&` (Und)
 - `||` (Oder)
+- `^` (exklusiv Oder)
 - `!` (Negation)
 
 ## Beispiel
@@ -216,6 +225,7 @@ boolean y = false;
 
 boolean andResult = x && y; // false
 boolean orResult = x || y;  // true
+boolean xorResult = x ^ y;  // true
 boolean notResultX = !x;    // false
 boolean notResultY = !y;    // true
 ```
@@ -228,6 +238,7 @@ bool y = false;
 
 bool andResult = x && y; // false
 bool orResult = x || y;  // true
+bool xorResult = x ^ y;  // true
 bool notResultX = !x;    // false
 bool notResultY = !y;    // true
 ```
@@ -236,11 +247,11 @@ bool notResultY = !y;    // true
 
 Die Ergebnisse von logischen Operatoren können in sogenannten Wahrheitstabellen dargestellt werden.
 
-## Wahrheitstabellen für logische Operatoren
+### Wahrheitstabellen für logische Operatoren
 
-Hier folgen die Wahrheitstabellen für die logischen Operatoren "Und" (`&&`), "Oder" (`||`) und "Negation" (`!`):
+Hier folgen die Wahrheitstabellen für die logischen Operatoren "Und" (`&&`), "Oder" (`||`), "exklusiv Oder" (`^`) und "Negation" (`!`):
 
-### "Und" (`&&`) Wahrheitstabelle
+#### "Und" (`&&`) Wahrheitstabelle
 
 | A     | B     | A && B |
 | ----- | ----- | ------- |
@@ -249,7 +260,7 @@ Hier folgen die Wahrheitstabellen für die logischen Operatoren "Und" (`&&`), "O
 | false | true  | false   |
 | false | false | false   |
 
-### "Oder" (`||`) Wahrheitstabelle
+#### "Oder" (`||`) Wahrheitstabelle
 
 | A     | B     | A \|\| B |
 | ----- | ----- | --------- |
@@ -258,7 +269,16 @@ Hier folgen die Wahrheitstabellen für die logischen Operatoren "Und" (`&&`), "O
 | false | true  | true      |
 | false | false | false     |
 
-### "Negation" (`!`) Wahrheitstabelle
+#### "exklusiv Oder" (`^`) Wahrheitstabelle
+
+| A     | B     | A \|\| B |
+| ----- | ----- | --------- |
+| true  | true  | false     |
+| true  | false | true      |
+| false | true  | true      |
+| false | false | false     |
+
+#### "Negation" (`!`) Wahrheitstabelle
 
 | A     | !A    |
 | ----- | ----- |
@@ -266,9 +286,12 @@ Hier folgen die Wahrheitstabellen für die logischen Operatoren "Und" (`&&`), "O
 | false | true  |
 
 Diese Wahrheitstabellen zeigen die möglichen Ergebnisse der logischen Operatoren für alle Kombinationen der Eingabewerte `A` und `B`, sowie die Negation von `A`.
+
 ### Bedeutung der Werte
 
 - `true`: Der Ausdruck ist wahr.
 - `false`: Der Ausdruck ist falsch.
 
 Die logischen Operatoren ermöglichen es, komplexe Bedingungen zu erstellen, indem mehrere Ausdrücke miteinander kombiniert werden. Zum Beispiel kann man sagen: "Wenn x wahr ist und y wahr ist, dann mache etwas."
+
+Im folgenden Kapitel lernen wir wie solche Bedingungen erstellt werden.
