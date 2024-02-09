@@ -150,7 +150,7 @@ if (amount == 250) {
 } else if (amount < 250) {
    System.out.println("The glass is not full anymore!");
 } else {
-    System.out.println("The glass is more than full!");
+   System.out.println("The glass is more than full!");
 }
 ```
 
@@ -167,7 +167,7 @@ if (amount == 250) {
 } else if (amount < 250) {
    Console.WriteLine("The glass is not full anymore!");
 } else {
-    Console.WriteLine("The glass is more than full!");
+   Console.WriteLine("The glass is more than full!");
 }
 ```
 
