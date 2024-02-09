@@ -13,7 +13,7 @@ Nach erfolgreicher Absolvierung dieses Themas können die Teilnehmer\*innen:
 ## Inhaltsverzeichnis
 
 1. [Problemstellung](00-problemstellung.md)
-1. [Arithmetische, relationale und logische Operatoeren](./01-operators.md)
+1. [Arithmetische, relationale und logische Operatoren](./01-operators.md)
 1. [Bedingte Ausführung](./02-conditions.md)
 1. [Erreichbarkeit von Variablen](./03-scope-of-variables.md)
 1. [Codeteile wiederholen mit Schleifen](./04-loops.md)
