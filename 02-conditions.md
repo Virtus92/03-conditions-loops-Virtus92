@@ -1,16 +1,16 @@
 # Bedingungen
 
-Programme sind nicht nur eine Folge von Tätigkeiten. In manchen Fällen müssen aufgrund von Parametern (In der Softwareentwicklung werden die Parameter Variablen genannt) Entscheidungen getroffen werden, um zu definieren, wie der weitere Verlauf des Programms sein soll. Zum Beispiel:
-- Wenn der Angestellte Herr Müller weniger als 1500€ Brutto im Monat verdient, hat er Anspruch auf eine Förderung. So wird im Anschluss die Auszahlung der Förderung angestossen.
-- Wenn die Familie Mayer weniger als 3000€ monatliches Gesamteinkommen hat, hat sie Anspruch auf Wohnbeihilfe. So wird der Ablauf zur Auszahlung der Wohnbeihilfe genehmigt.
-- usw. 
+Programme sind nicht nur eine Folge von Tätigkeiten. In manchen Fällen müssen aufgrund von Parametern (sogenannte Variablen) Entscheidungen getroffen werden, um den weiteren Verlauf des Programms zu definieren. Zum Beispiel:
+- Wenn der Angestellte Herr Müller weniger als 1500€ Brutto im Monat verdient, hat er Anspruch auf eine Förderung. In diesem Fall wird im Anschluss die Auszahlung der Förderung angestoßen.
+- Wenn die Familie Mayer weniger als 3000€ monatliches Gesamteinkommen hat, hat sie Anspruch auf Wohnbeihilfe. Hier wird der Ablauf zur Auszahlung der Wohnbeihilfe genehmigt.
+
 Entscheidungen können in einem Programm auf verschiedene Art und Weisen erfolgen. 
-  - Einerseits mit einem klassischen if ... then ... else ... (Wenn Bedingung erfüllt, dann tue dies und sonst tue das). 
-  - In speziellen Fälle kann man switch ... case ... break verwenden
+  - Einerseits mit einem klassischen `if ... then ... else ...` (Wenn Bedingung erfüllt, dann tue dies und sonst tue das). 
+  - In speziellen Fälle kann man `switch ... case ... break` verwenden
 
 ## Wenn *Bedingung erfüllt*, dann *tue dies* sonst *tue das*
 
-Die einfachste Art, Bedingungen zu überprüfen und unterschiedliche Codeteile auszuführen, je nach Bedingungsergebnis wird mit eine ***WENN ... DANN ... SONST ..."-Anweisung geprüft. Hier kommen uns die Operatoren aus dem vorigen Kapitel zugute. Wie funktioniert diese:
+Die einfachste Art, Bedingungen zu überprüfen und unterschiedliche Codeteile auszuführen, je nach Bedingungsergebnis wird mit eine "`WENN ... DANN ... SONST ...`"-Anweisung geprüft. Hier kommen uns die Operatoren aus dem vorigen Kapitel zugute. Wie funktioniert diese:
 
 ```
 WENN <Bedingungen erfüllt>
@@ -18,9 +18,9 @@ DANN <tue dies>
 SONST <tue das>
 ```
 
-In ***<Bedingungen erfüllt>*** kann eine Bedingung (diese ergibt immer entweder true oder false) vorzufinden sein. Möchte man mehrere Bedingungen in einem überprüfen müssen wir logische Operatoren verwenden, um die einzelnen Bedingungen zu kombinieren.
+In `<Bedingungen erfüllt>` kann eine einzige Bedingung (diese ergibt immer entweder true oder false) vorzufinden sein. Möchte man mehrere Bedingungen in einem überprüfen müssen wir logische Operatoren verwenden, um die einzelnen Bedingungen zu kombinieren.
 
-In ***<tue dies>*** bzw. <tue das> ist jeweils ein eigener Programmcode zu finden. 
+In `<tue dies>` bzw. `<tue das>` sind jene Anweisungen zu finden, die in dem jeweiligen Fall auszuführen sind.
 
 ### Erste WENN-Anweisungen
 
@@ -51,12 +51,23 @@ if (amount == 125) {
 #### C#
 
 ```c#
+Console.WriteLine("Enter the amount: ");
+int amount = Convert.ToInt32(Console.ReadLine());
 
+if (amount == 250) {
+   Console.WriteLine("The glass is full!");
+}
+if (amount < 250) {
+   Console.WriteLine("The glass is not full anymore!");
+}
+if (amount == 125) {
+   Console.WriteLine("The glass is half full!");
+}
 ```
 
 ### Verschachtelung von Bedingungen
 
-Im vorigen Beispiel merken wir aber schnell, dass das Glas gleichzeitig halb voll und nicht mehr voll ist. Wenn man IF-Anweisungen einfach untereinander schreibt, werden diese der Reihe nach ausgeführt, egal, ob die eine Bedingung eine andere ausschließen würde. Somit müssen die 3 IF-Anweisungen einander ausschließen. Hierfür die ***else*** gedacht. Es bedeutet: *Nur dann, wenn die Bedingung nicht erfüllt ist, führe diesen Code aus*. So verändern wir unser Programm wie folgt:
+Im vorigen Beispiel merken wir aber schnell, dass das Glas gleichzeitig halb voll und nicht mehr voll sein kann. Wenn man IF-Anweisungen einfach untereinander schreibt, werden diese der Reihe nach ausgeführt, egal, ob die eine Bedingung eine andere ausschließen würde. Somit müssen die 3 `if`-Anweisungen einander ausschließen. Hierfür die `else` gedacht. Es bedeutet: *Nur dann, wenn die Bedingung nicht erfüllt ist, führe diesen Code aus*. So verändern wir unser Programm wie folgt:
 
 #### Java 
 
@@ -76,12 +87,21 @@ if (amount == 250) {
 #### C#
 
 ```c#
+Console.WriteLine("Enter the amount: ");
+int amount = Convert.ToInt32(Console.ReadLine());
 
+if (amount == 250) {
+   Console.WriteLine("The glass is full!");
+} else if (amount < 250) {
+   Console.WriteLine("The glass is not full anymore!");
+} else if (amount == 125) {
+   Console.WriteLine("The glass is half full!");
+}
 ```
 
 ### Reihenfolge bei verschachtelte Bedingungen
 
-Jetzt haben wir das Problem, dass nie halb voll ausgegeben wird, weil die Bedingung ***if (amount < 250)*** immer zuerst greift, bevor die Bedingung ***if (amount == 125)*** geprüft werden kann. So müssen wir unser Programm noch einmal ändern:
+Jetzt haben wir das Problem, dass "halb voll" nie ausgegeben wird, weil die Bedingung `if (amount < 250)` immer zuerst greift, bevor die Bedingung `if (amount == 125)` geprüft werden kann. So müssen wir unser Programm noch einmal ändern:
 
 #### Java 
 
@@ -101,12 +121,21 @@ if (amount == 250) {
 #### C#
 
 ```c#
+Console.WriteLine("Enter the amount: ");
+int amount = Convert.ToInt32(Console.ReadLine());
 
+if (amount == 250) {
+   Console.WriteLine("The glass is full!");
+} else if (amount == 125) {
+   Console.WriteLine("The glass is half full!");
+} else if (amount < 250) {
+   Console.WriteLine("The glass is not full anymore!");
+}
 ```
 
 ### Sind alle möglichen Fälle wirklich abgedeckt?
 
-Oje, jetzt fällt uns auf, dass eine Zahl über 250 zu keiner Ausgabe führt. Uns fehlt also noch eine Bedingung:
+Jetzt fällt uns auf, dass eine Zahl über 250 zu keiner Ausgabe führt. Uns fehlt also noch eine Bedingung:
 
 #### Java 
 
@@ -128,14 +157,25 @@ if (amount == 250) {
 #### C#
 
 ```c#
+Console.WriteLine("Enter the amount: ");
+int amount = Convert.ToInt32(Console.ReadLine());
 
+if (amount == 250) {
+   Console.WriteLine("The glass is full!");
+} else if (amount == 125) {
+   Console.WriteLine("The glass is half full!");
+} else if (amount < 250) {
+   Console.WriteLine("The glass is not full anymore!");
+} else {
+    Console.WriteLine("The glass is more than full!");
+}
 ```
 
 Jetzt deckt unser Programm alle Fälle ab und ist soweit optimiert, dass möglichst wenige Bedingungen geprüft werden. Wir sind fürs Erste fertig.
 
 ## Die komprimierte Version von WENN-Anweisungen
 
-Stellen Sie sich vor, sie sollen Codezeilen sparen und die DANN- und SONST-Anweisungen befüllen dieselbe Variable. Genau für diesen speziellen Fall wurde der **ternäre Operator** geschaffen. Hier ein Beispiel zur Veranschaulichung:
+Stellen Sie sich vor, sie sollen Codezeilen sparen und die DANN- und SONST-Anweisungen befüllen dieselbe Variable. Unter anderem für diesen speziellen Fall gibt es den **ternären Operator**.
 
 #### Java 
 
@@ -150,26 +190,29 @@ public static void main(String[] args) {
 
 ```
 
+#### C#
+
+```c#
+Console.WriteLine("Enter the age: ");
+int age = Convert.ToInt32(Console.ReadLine());
+
+string ageState = age > 18 ? "adult" : "underage";
+Console.WriteLine(ageState);
+```
+
 ***ageState = age > 18 ? "adult" : "underage"*** besteht aus folgenden Elementen:
 - ***ageState = <Ausdruck>***: die Variable **ageState** bekommt den Ergebniswert von <Ausdruck> zugewiesen
 - ***age > 18*** stellt die zu prüfende Bedingung dar
-- ***?*** könnte man als das Fragezeichen am Ende der Bedingung verstehen. Also die Bedingung wird davor gesetzt und danach kommt was zu tun ist.
+- ***?*** könnte man als das Fragezeichen am Ende der Bedingung verstehen. Also die Bedingung wird davor gesetzt und danach kommen jene Anweisungen, die je nach Fall ausgeführt werden sollen.
 - ***"adult"*** ist der Wert, der ausgegeben wird, wenn die Bedingung wahr ist
-- ***:*** trennt die beiden möglichen Ergebnisse (wenn bedingung wahr bzw. falsch). Man könnte sich vorstellen ***:*** stellt das sonst dar.
+- ***:*** trennt die beiden möglichen Ergebnisse: wenn bedingung wahr bzw. falsch ist.
 - ***"underage"*** ist der Wert, der ausgegeben wird, wenn die Bedingung falsch ist.
 
 Diese komprimierte Version ist aufgrund der schlechteren Lesbarkeit jedoch sparsam zu verwenden.
 
-#### C#
-
-```c#
-
-```
-
-
 ## Mehrfache Verzweigung
 
-Darf eine Variable eine bestimmte Anzahl an Werten annehmen und je nach Wert wird ein anderer Code ausgeführt, würde man es natürlich mit verschachtelten WENNS zwar lösen können, so eine Verschachtelung wird aber sehr schnell unübersichtlich. Dafür gibt es die mehrfache Verzweigung. 
+Darf eine Variable eine bestimmte Anzahl an Werten annehmen und je nach Wert wird ein anderer Code ausgeführt, würde man es natürlich mit verschachtelten WENNs zwar lösen können, so eine Verschachtelung wird aber sehr schnell unübersichtlich. Dafür gibt es die mehrfache Verzweigung. 
 
 In Pseudocode formuliert, würde es folgendermaßen aussehen:
 
@@ -183,43 +226,51 @@ falls <Ausdruck> gleich:
 Ende
 ```
 
-Also falls <Ausdruck> <Wert 1> annimmt, führe <Anweisung(en) 1> aus bzw. <Wert 2>, führe <Anweisung(en) 2> aus bzw. <Wert 3> ...
+Also falls `<Ausdruck>` `<Wert 1>` annimmt, führe `<Anweisung(en) 1>` aus bzw. `<Wert 2>`, führe `<Anweisung(en) 2>` aus bzw. `<Wert 3>` ...
 
-<Ausdruck> kann hier im einfachsten Falle eine Variable sein, die verschiedene Werte annehmen darf oder eine Operation, die idealerweise mehr als 2 mögliche Werte annehmen darf.
+`<Ausdruck>` kann hier im einfachsten Falle eine Variable sein, die verschiedene Werte annehmen darf oder eine Operation, die idealerweise mehr als 2 mögliche Werte annehmen darf.
 
-Zu erwähnen ist, dass <Wert 1>, <Wert 2>, ... sich bezieht immer auf den Ausdruck und stellt den Rückgabewert des Ausdruckes dar! Es können also Werte oder Operationen wie a + b sein (zB eine Zahl, einen String, ...). 
+Zu erwähnen ist, dass <Wert 1>, <Wert 2>, ... den Rückgabewert des Ausdruckes darstellen! Es kann also Werte oder das Ergebnis von Operationen wie a + b sein (zB eine Zahl, einen String, ...).
 
-Das bedeutet auch, dass im Gegensatz zur WENN-Anweisung keine Bedingungen wie: i > 5, die einen boolschen Wert ergeben, erlaubt sind, da diese sich nicht direkt auf den <Ausdruck> beziehen.
+Das bedeutet auch, dass im Gegensatz zur WENN-Anweisung keine Bedingungen wie: i > 5, die einen boolschen Wert ergeben, erlaubt sind, da diese sich nicht direkt auf den `<Ausdruck>` beziehen.
 
 #### Java 
 
 ```Java
-public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    int grade = scanner.nextInt();
-
-    switch (grade){
-        case 1: System.out.println("Sehr gut"); break;
-        case 2: System.out.println("Gut"); break;
-        case 3: System.out.println("Befriedigend"); break;
-        case 4: System.out.println("Genügend"); break;
-        case 5: System.out.println("Nicht Genügend"); break;
-        default: System.out.println("Ist keine Note!");
-   }
+switch (Variable){
+   case Wert1: 
+      // Code, der ausgeführt wird, wenn Variable gleich Wert1 ist
+      break;
+   case Wert2: 
+      // Code, der ausgeführt wird, wenn Variable gleich Wert2 ist
+      break;
+   default: 
+      // Code, der ausgeführt wird, wenn Variable zu keinem Fall passt
 }
 ```
-In einem switch-statement sind folgende Schlüsselwörter zu beachten:
-- ***switch***: öffnet den Block der mehrfachen Verzweigung. Unmittelbar danach ist der <Ausdruck> zu finden.
-- ***case***: startet den Block eines Anwendungsfalls. Direkt danach folgt das Kriterium für die Auswahl dieses Falles. 
-- ***break***: sagt aus, dass der switch-Block hier abgebrochen wird, weil der Wert bereits gefunden wurde. 
-- ***default***: sollte keiner der Werte <Ausdruck> entsprechen, wird der darauffolgender Code-Teil ausgeführt. Dieses Schlüsselwort ist optional. Dieser Code-Teil benötigt keinen ***break***, da er am Schluss ist.
-
 
 #### C#
 
 ```c#
-
+switch (Variable){
+   case Wert1: 
+      // Code, der ausgeführt wird, wenn Variable gleich Wert1 ist
+      break;
+   case Wert2: 
+      // Code, der ausgeführt wird, wenn Variable gleich Wert2 ist
+      break;
+   default: 
+      // Code, der ausgeführt wird, wenn Variable zu keinem Fall passt
+}
 ```
+
+In einem switch-statement sind folgende Schlüsselwörter zu beachten:
+- `switch`: öffnet den Block der mehrfachen Verzweigung. Unmittelbar danach ist der `<Ausdruck>` zu finden.
+- `case`: startet den Block eines Anwendungsfalls. Direkt danach folgt das Kriterium für die Auswahl dieses Falles. 
+- `break`: wird verwendet, um die switch-Anweisung zu verlassen, nachdem ein Fall übereinstimmt. 
+- `default`: sollte keiner der Werte `<Ausdruck>` entsprechen, wird der darauffolgender Code-Teil ausgeführt. Dieses Schlüsselwort ist optional. Dieser Code-Teil benötigt keinen `break`, da er am Schluss ist.
+
+Diese bedingten Anweisungen sind leistungsstarke Werkzeuge in der Programmierung und ermöglichen es Ihnen, den Ablauf Ihres Codes basierend auf verschiedenen Bedingungen zu steuern.
 
 ### Mehrfache Ausdrücke und Gruppierung von Kriterien
 
