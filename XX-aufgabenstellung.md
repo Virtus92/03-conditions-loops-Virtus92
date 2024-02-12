@@ -1,14 +1,12 @@
 # Aufgabenstellungen
 
-Folgende Aufgabenstellungen sind zu lösen. Die dafür nötigen Informationen findest du in den weiteren Kapiteln.
-
 ## Operatoren
 
 ### Übung/Exercise 2.1: Eigenschaften einer Zahl / Characteristics of a number
 
 **DE:**
 
-Schreibe ein Programm, dass von der Konsole eine Zahl einliest und ausgibt:
+Schreibe ein Programm, das eine Zahl von der Konsole einliest und folgende Eigenschaften ausgibt:
 - ob es sich um eine runde Zahl handelt
 - ob die Zahl gerade ist
 - ob die Zahl deiner Glückszahl entspricht (denk dir hierfür einfach eine eigene Glückszahl aus und gib sie zu Beginn des Programms auf der Konsole aus)
@@ -18,14 +16,13 @@ Tipp: Für die ersten beiden Punkte wirst du die Modulo Funktion brauchen.
 
 ***EN:***
 
-Write a program that reads a number from the console and calculates and prints characteristics of it:
+Write a program that reads a number from the console and calculates and prints the following characteristics:
+- is the number round
+- is the number even
+- does the number equal your lucky number (choose any lucky number for this and print it to the console at the start of the program)
+- does it have two digits
 
-    is the number round
-    is the number even
-    does the number equal your lucky number (choose any lucky number for this and print it to the console at the start of the program)
-    does it have two digits
-
-Hint: You might find the modulo operation helpful for the first two exercises. 
+*Hint*: You might find the modulo operation helpful for the first two exercises. 
 
 
 #### Abnahmekriterien
@@ -52,7 +49,7 @@ Bonus: We go for a lunch break between 12 and 13 o'clock, print that info in cas
 #### Abnahmekriterien
 
 - die Variablennamen sind aussagekräftig
-- die Start- und Endezeit sind als Date gespeichert und für Vergleiche werden Date-Methoden verwendet???
+- die Start- und Endezeit sind als Datum gespeichert und für Vergleiche werden Datum-Methoden verwendet
 - das Programm funktioniert und löst die geforderten Aufgaben
 - der\*die Teilnehmer\*in ist in der Lage sein\*ihr Programm zu erklären
 
@@ -62,27 +59,27 @@ Bonus: We go for a lunch break between 12 and 13 o'clock, print that info in cas
 
 **DE:**
 
-Schreibe ein Programm, dass eine Schulnote in numerischer Form (1-5) in seine textuelle Form übersetzt:
+Schreibe ein Programm, dass eine Schulnote in numerischer Form (1-5) in ihre textuelle Form übersetzt:
 
-    Bei einer 1 wird "Sehr gut" auf die Konsole geschrieben
-    Bei einer 2 wird "Gut" auf die Konsole geschrieben
-    Bei einer 3 wird "Befriedigend" auf die Konsole geschrieben
-    Bei einer 4 wird "Genügend" auf die Konsole geschrieben
-    Bei einer 5 wird "Nicht Gengügend" auf die Konsole geschrieben
+- Bei einer 1 wird "Sehr gut" auf die Konsole geschrieben
+- Bei einer 2 wird "Gut" auf die Konsole geschrieben
+- Bei einer 3 wird "Befriedigend" auf die Konsole geschrieben
+- Bei einer 4 wird "Genügend" auf die Konsole geschrieben
+- Bei einer 5 wird "Nicht Gengügend" auf die Konsole geschrieben
 
 ***EN:***
 
 Write a program that translates grades from its numerical form to a word representation.
 
-    Print "Very good" in case of a 1.
-    Print "Good" in case of a 2.
-    Print "Satisfactory" in case of a 3.
-    Print "Sufficient" in case of a 4.
-    Print "Not sufficient" in case of a 5.
+- Print "Very good" in case of a 1.
+- Print "Good" in case of a 2.
+- Print "Satisfactory" in case of a 3.
+- Print "Sufficient" in case of a 4.
+- Print "Not sufficient" in case of a 5.
 
 #### Abnahmekriterien
 
-- Variablenname aussagekräftig und Datentyp sinnvoll gewählt
+- Variablenname sind aussagekräftig und der Datentyp sinnvoll gewählt
 - das Programm funktioniert und bildet alle angeforderten Punkte korrekt ab
 - der\*die Teilnehmer\*in ist in der Lage sein\*ihr Programm zu erklären und warum er\*sie es so gelöst hat (switch wäre hier die bessere Variante)
 
@@ -108,7 +105,7 @@ Write a program, that prints the numbers from 1 to 100 by those rules. You don't
 
 #### Abnahmekriterien
 
-- Variablennamen aussagekräftig und Datentypen sinnvoll gewählt
+- Variablennamen sind aussagekräftig und Datentypen sind sinnvoll gewählt
 - Benutzerführung klar, sofern vorhanden 
 - das Programm funktioniert und bildet alle angeforderten Punkte korrekt ab
 - der\*die Teilnehmer\*in ist in der Lage sein\*ihr Programm zu erklären und warum er\*sie es so gelöst hat (hier ist eine for-Schleife am sinnvollsten, auch wenn man while verwenden kann)
@@ -151,7 +148,7 @@ times 2:
 
 #### Abnahmekriterien
 
-- Variablennamen aussagekräftig und Datentypen sinnvoll gewählt
+- Variablennamen sind aussagekräftig und Datentypen sind sinnvoll gewählt
 - Benutzerführung klar, sofern vorhanden 
 - das Programm funktioniert und bildet alle angeforderten Punkte korrekt ab
 - der\*die Teilnehmer\*in ist in der Lage sein\*ihr Programm zu erklären und warum er\*sie es so gelöst hat (hier sind verschachtelte for-Schleifen am sinnvollsten, auch wenn man while-Schleifen verwenden könnte)
@@ -184,6 +181,8 @@ Quz Otmdmwfqd zmyqze Omqemd!
 
 Schreibe ein Programm dass von der Konsole einen beliebiglangen Text einliest, danach zufällig einen Schlüssel zwischen 1 und 26 wählt und den verschlüsselten String ausgibt. 
 
+*Hinweis*: Was passiert, wenn der zu verschlüsselnde Buchstabe über am Ende des Alphabets ist, wie z.B. z, y, oder x?
+
 ***EN:***
 
 We know that every letter in Java has a unique code. In detail the numerical representation of a character is the Unicode.
@@ -210,11 +209,13 @@ Quz Otmdmwfqd zmyqze Omqemd!
 
 Write a program that reads any text from the console, generates a key between 1 and 26 and prints the encrypted message. 
 
+*Hint*: What happens when the letter that should be encrypted, is at the end of the alphabet, like z, y or x?
+
 #### Abnahmekriterien
 
-- Variablennamen aussagekräftig und Datentypen sinnvoll gewählt
+- Variablennamen sind aussagekräftig und Datentypen sind sinnvoll gewählt
 - Benutzerführung klar, sofern vorhanden 
-- Trennung zwischen Klartext und verschlüsselter Text, um Vergleich nach Entschlüsselung zu erlauben
+- getrennte Speicher von Klartext und verschlüsselter Text, um Vergleich nach Entschlüsselung zu erlauben
 - das Programm funktioniert und bildet alle angeforderten Punkte korrekt ab
 - der\*die Teilnehmer\*in ist in der Lage sein\*ihr Programm zu erklären und warum er\*sie es so gelöst hat (hier ist eine for-Schleife am sinnvollsten, auch wenn man eine while-Schleife verwenden könnte)
 
@@ -229,5 +230,13 @@ Schreibe ein kleines Programm, welches eine Liste von Zahlen über die Konsole z
 ***EN:***
 
 Provide a program that reads numbers from the console until it reads the letter 'q'. Calculate the maximum of all values and print it to the console.
+
+#### Abnahmekriterien
+
+- Variablennamen sind aussagekräftig und Datentypen sind sinnvoll gewählt
+- Benutzerführung klar, sofern vorhanden 
+- Da die Teilnehmer\*innen Listen noch nicht kennengelernt haben, reicht es, wenn der eingegebene Wert nach Vergleich und Speicherung des Maximums überschrieben wird.
+- das Programm funktioniert und bildet alle angeforderten Punkte korrekt ab
+- der\*die Teilnehmer\*in ist in der Lage sein\*ihr Programm zu erklären und warum er\*sie es so gelöst hat (hier ist eine for-Schleife am sinnvollsten, auch wenn man eine while-Schleife verwenden könnte)
 
 Zurück zur [Startseite](README.md)
