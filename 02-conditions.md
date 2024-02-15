@@ -8,119 +8,93 @@ Entscheidungen können in einem Programm auf verschiedene Art und Weisen erfolge
   - Einerseits mit einem klassischen `if ... then ... else ...` (Wenn Bedingung erfüllt, dann tue dies und sonst tue das). 
   - In speziellen Fälle kann man `switch ... case ... break` verwenden
 
-## Wenn *Bedingung erfüllt*, dann *tue dies* sonst *tue das*
+## `if` Anweisung
 
-Die einfachste Art, Bedingungen zu überprüfen und unterschiedliche Codeteile auszuführen, je nach Bedingungsergebnis wird mit eine "`WENN ... DANN ... SONST ...`"-Anweisung geprüft. Hier kommen uns die Operatoren aus dem vorigen Kapitel zugute. Wie funktioniert diese:
+Die `if`-Anweisung ist ein grundlegendes Bauelement in der Programmierung, das es ermöglicht, einen Codeblock auszuführen, wenn eine bestimmte Bedingung wahr ist. Die grundlegende Syntax in sowohl Java als auch C# ist ähnlich:
 
+```java
+// Java
+if (Bedingung) {
+    // Code, der ausgeführt wird, wenn die Bedingung wahr ist
+}
 ```
-WENN <Bedingungen erfüllt>
-DANN <tue dies>
-SONST <tue das>
+
+```csharp
+// C#
+if (Bedingung) {
+    // Code, der ausgeführt wird, wenn die Bedingung wahr ist
+}
 ```
 
-In `<Bedingungen erfüllt>` kann eine einzige Bedingung (diese ergibt immer entweder true oder false) vorzufinden sein. Möchte man mehrere Bedingungen in einem überprüfen müssen wir logische Operatoren verwenden, um die einzelnen Bedingungen zu kombinieren.
+Es ist auch möglich, einen `else`-Block einzufügen, um festzulegen, was passieren soll, wenn die Bedingung falsch ist:
 
-In `<tue dies>` bzw. `<tue das>` sind jene Anweisungen zu finden, die in dem jeweiligen Fall auszuführen sind.
+```java
+// Java
+if (Bedingung) {
+    // Code, der ausgeführt wird, wenn die Bedingung wahr ist
+} else {
+    // Code, der ausgeführt wird, wenn die Bedingung falsch ist
+}
+```
 
-### Erste WENN-Anweisungen
+```csharp
+// C#
+if (Bedingung) {
+    // Code, der ausgeführt wird, wenn die Bedingung wahr ist
+} else {
+    // Code, der ausgeführt wird, wenn die Bedingung falsch ist
+}
+```
+
+## `else if` Anweisung
+
+Die `else if`-Anweisung ermöglicht es, mehrere Bedingungen nacheinander zu überprüfen. Wenn die vorherigen `if`- oder `else if`-Bedingungen falsch sind, wird zur nächsten übergegangen. Dies ist nützlich, wenn mehrere Bedingungen berücksichtigt werden müssen:
+
+```java
+// Java
+if (Bedingung1) {
+    // Code, der ausgeführt wird, wenn Bedingung1 wahr ist
+} else if (Bedingung2) {
+    // Code, der ausgeführt wird, wenn Bedingung2 wahr ist
+} else {
+    // Code, der ausgeführt wird, wenn alle Bedingungen falsch sind
+}
+```
+
+```csharp
+// C#
+if (Bedingung1) {
+    // Code, der ausgeführt wird, wenn Bedingung1 wahr ist
+} else if (Bedingung2) {
+    // Code, der ausgeführt wird, wenn Bedingung2 wahr ist
+} else {
+    // Code, der ausgeführt wird, wenn alle Bedingungen falsch sind
+}
+```
+
+### Erste IF-Anweisungen
 
 Wir wollen ein Programm schreiben, das entscheidet, ob ein Glas voll, nicht mehr voll oder halb voll ist:
 - Bei 250 ml ist das Glas voll
 - Bei weniger als 250 ml ist das Glas nicht mehr voll
 - Bei 125 ml ist das Glas halb voll
 
-Zuerst wollen wir die einzelnen Bedingungen aus der Liste überprüfen:
-
-#### Java 
-
 ```Java
+// Java
 Scanner scanner = new Scanner(System.in);
 int amount = scanner.nextInt();
 
 if (amount == 250) {
    System.out.println("The glass is full!");
-}
-if (amount < 250) {
-   System.out.println("The glass is not full anymore!");
-}
-if (amount == 125) {
-   System.out.println("The glass is half full!");
-}
-```
-
-#### C#
-
-```c#
-Console.WriteLine("Enter the amount: ");
-int amount = Convert.ToInt32(Console.ReadLine());
-
-if (amount == 250) {
-   Console.WriteLine("The glass is full!");
-}
-if (amount < 250) {
-   Console.WriteLine("The glass is not full anymore!");
-}
-if (amount == 125) {
-   Console.WriteLine("The glass is half full!");
-}
-```
-
-### Verschachtelung von Bedingungen
-
-Im vorigen Beispiel merken wir aber schnell, dass das Glas gleichzeitig halb voll und nicht mehr voll sein kann. Wenn man IF-Anweisungen einfach untereinander schreibt, werden diese der Reihe nach ausgeführt, egal, ob die eine Bedingung eine andere ausschließen würde. Somit müssen die 3 `if`-Anweisungen einander ausschließen. Hierfür die `else` gedacht. Es bedeutet: *Nur dann, wenn die Bedingung nicht erfüllt ist, führe diesen Code aus*. So verändern wir unser Programm wie folgt:
-
-#### Java 
-
-```Java
-Scanner scanner = new Scanner(System.in);
-int amount = scanner.nextInt();
-
-if (amount == 250) {
-   System.out.println("The glass is full!");
-} else if (amount < 250) {
-   System.out.println("The glass is not full anymore!");
-} else if (amount == 125) {
-   System.out.println("The glass is half full!");
-}
-```
-
-#### C#
-
-```c#
-Console.WriteLine("Enter the amount: ");
-int amount = Convert.ToInt32(Console.ReadLine());
-
-if (amount == 250) {
-   Console.WriteLine("The glass is full!");
-} else if (amount < 250) {
-   Console.WriteLine("The glass is not full anymore!");
-} else if (amount == 125) {
-   Console.WriteLine("The glass is half full!");
-}
-```
-
-### Reihenfolge bei verschachtelte Bedingungen
-
-Jetzt haben wir das Problem, dass "halb voll" nie ausgegeben wird, weil die Bedingung `if (amount < 250)` immer zuerst greift, bevor die Bedingung `if (amount == 125)` geprüft werden kann. So müssen wir unser Programm noch einmal ändern:
-
-#### Java 
-
-```Java
-Scanner scanner = new Scanner(System.in);
-int amount = scanner.nextInt();
-
-if (amount == 250) {
-   System.out.println("The glass is full!");
-} else if (amount == 125) {
+} else if (amount == 125) { // ACHTUNG! die Bedingung '== 125' muss vor '< 250' geprüft werden, ansonsten greift immer nur '< 250'
    System.out.println("The glass is half full!");
 } else if (amount < 250) {
    System.out.println("The glass is not full anymore!");
 }
 ```
 
-#### C#
-
-```c#
+```csharp
+// C#
 Console.WriteLine("Enter the amount: ");
 int amount = Convert.ToInt32(Console.ReadLine());
 
