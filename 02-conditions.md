@@ -1,12 +1,10 @@
 # Bedingungen
 
-Programme sind nicht nur eine Folge von Tätigkeiten. In manchen Fällen müssen aufgrund von Parametern (sogenannte Variablen) Entscheidungen getroffen werden, um den weiteren Verlauf des Programms zu definieren. Zum Beispiel:
-- Wenn der Angestellte Herr Müller weniger als 1500€ Brutto im Monat verdient, hat er Anspruch auf eine Förderung. In diesem Fall wird im Anschluss die Auszahlung der Förderung angestoßen.
-- Wenn die Familie Mayer weniger als 3000€ monatliches Gesamteinkommen hat, hat sie Anspruch auf Wohnbeihilfe. Hier wird der Ablauf zur Auszahlung der Wohnbeihilfe genehmigt.
+Programme sind nicht nur eine Folge von Tätigkeiten. In manchen Fällen müssen aufgrund von Parametern/Variablen Entscheidungen getroffen werden, um den weiteren Verlauf des Programms zu definieren. Zum Beispiel:
+- Wenn der Angestellte Herr Müller weniger als z.B. 1500€ Brutto im Monat verdient, hat er Anspruch auf eine Förderung. Wenn die Bedingung zutrifft wird die Auszahlung der Förderung veranlasst.
+- Wenn die Familie Mayer weniger als z.B. 3000€ monatliches Gesamteinkommen hat, hat sie Anspruch auf Wohnbeihilfe. Wenn die Bedingung zutrifft wird die Auszahlung der Wohnbeihilfe genehmigt.
 
-Entscheidungen können in einem Programm auf verschiedene Art und Weisen erfolgen. 
-  - Einerseits mit einem klassischen `if ... then ... else ...` (Wenn Bedingung erfüllt, dann tue dies und sonst tue das). 
-  - In speziellen Fälle kann man `switch ... case ... break` verwenden
+Entscheidungen können in einem Programm auf verschiedene Art und Weisen erfolgen, die wir in den kommenden Kapiteln erläutern werden.
 
 ## `if` Anweisung
 
