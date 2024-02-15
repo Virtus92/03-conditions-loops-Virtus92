@@ -5,111 +5,69 @@ Wie im letzten Kapitel bereits gelernt, benötigen Programme "Behälter" zur Spe
 - Zwischenergebnisse von Rechnungen
 - ...
 
-Diese werden `Variablen` gennant.Eine Variable besteht in den meisten Programmiersprachen aus folgenden Bestandteilen:
+Diese werden `Variablen` gennant. Eine Variable besteht in den meisten Programmiersprachen aus folgenden Bestandteilen:
 - der `Name` der Variable, mit dem diese im Rahmen des Programms aufgerufen werden kann
 - der `Wert` der Variable. Dies ist der Inhalt dieser Variable
-- der `Datentyp` der Variable definiert, welche Werte in die Variable hineingespeichert werden dürfen. In vielen Programmiersprachen wird auch der Datentyp explizit definiert (in manchen Programmiersprachen wird kein Datentyp definiert, sodass man in der Variable ziemlich alles hineinspeichern kann.). In diesem Kapitel arbeiten wir mit typisierten Programmiersprachen, also definieren wir den Datentyp bei der Deklaration der Variable.
+- der `Datentyp` der Variable definiert, welche Werte in die Variable hineingespeichert werden dürfen. In vielen Programmiersprachen wird auch der Datentyp explizit definiert (in manchen Programmiersprachen wird kein Datentyp definiert, sodass man in der Variable ziemlich alles hineinspeichern kann, z.B. Javascript). In diesem Kapitel arbeiten wir mit typisierten Programmiersprachen, also definieren wir den Datentyp bei der Deklaration der Variable.
 
-Bisher haben wir lediglich die letzten 3 Eigenschaften einer Variable gesehen. Variablen haben aber eine 4. Eigenschaft: der **Scope** der Variable.
-Dieser definiert, wo die Variable verwendet werden darf: 
-  - innerhalb eines Blocks (z.B. innerhalb eines IF-Statements)
-  - innerhalb einer Methode
-  - innerhalb einer Klasse
-  - global (wird in der Regel nicht verwendet)
+Bisher haben wir lediglich die genannten 3 Eigenschaften einer Variable kennengelernt. Variablen haben aber eine 4. Eigenschaft: der `Scope` der Variable.
 
-Zur Veranschaulichung und Erklärung nehmen wir unser Beispiel vom vorigen Kapitel her:
+In der Programmierung bezieht sich der `Scope` auf den Gültigkeitsbereich einer Variable, das heißt, an welchen Stellen im Code auf die Variable zugegriffen werden kann. Es ist wichtig zu verstehen, wo eine Variable deklariert ist und wo sie verwendet werden kann. Hier betrachten wir die Erreichbarkeit von Variablen in Java und C#.
 
-Wir wollen am Schluss unseres Programms die Ausgabe in der Console machen und deklarieren die Variable `status` mit einem zu kleinen Scope.
+## Java
 
-## Java 
+In Java wird der Scope einer Variable durch die geschweiften Klammern `{}` definiert. Eine Variable, die innerhalb dieser Klammern deklariert wird, ist nur innerhalb dieser Klammern sichtbar. Hier ein Beispiel:
 
-```Java
-Scanner scanner = new Scanner(System.in);
-int amount = scanner.nextInt();
+```java
+// Variable `zahl` ist nur im Bereich des IF-Statements sichtbar
+if (condition) {
+    int number = 10;
+    // Variable `number` kann hier verwendet werden
+}
 
-if (amount == 250) {
-   String status = "full"; // Wenn die Variable hier deklariert wird, ist diese auch nur in diesem Block erreichbar, sprich nur zwischen den { } von der IF-Anweisung.
-} 
+// Hier ist die Variable `number` nicht mehr erreichbar und würde einen Fehler verursachen
+```
 
-System.out.println("The glass is " + status); // Hier ist die Variable status also nicht erreichbar. Diese Anweisung würde zu einem Fehler führen.
+Um sicherzustellen, dass die Variable in einem größeren Bereich sichtbar ist, muss sie außerhalb der geschweiften Klammern deklariert werden:
 
+```java
+// Variable `zahl` ist jetzt im gesamten Block sichtbar
+int number;
+if (condition) {
+    number = 10;
+    // Variable `number` kann hier verwendet werden
+}
+
+// Variable `number` kann hier immer noch verwendet werden
 ```
 
 ## C#
 
-```c#
-Console.WriteLine("Enter the amount: ");
-int amount = Convert.ToInt32(Console.ReadLine());
+In C# funktioniert die Erreichbarkeit von Variablen ähnlich wie in Java. Der Scope wird durch geschweifte Klammern definiert:
 
-if (amount == 250) {
-   string status = "full"; // Wenn die Variable hier deklariert wird, ist diese auch nur in diesem Block erreichbar, sprich nur zwischen den { } von der IF-Anweisung.
-} 
-
-System.out.println("The glass is " + status); // Hier ist die Variable status also nicht erreichbar. Diese Anweisung würde zu einem Fehler führen.
-```
-
-Wir müssen unsere Variable also im übergeordneten Block definieren, in diesem Fall dort, wo `scanner` und `amount` definiert sind. 
-
-## Variable am richtigen Ort deklarieren
-
-> [!IMPORTANT]
-> Grundsätzlich gilt die Regel, jede Variable ist dort zu deklarieren, wo sie den kleinstmöglichen Scope hat und jedoch überall dort erreichbar ist, wo sie benötigt wird: jede Variable soll in jenem Block deklariert werden, der alle Aufrufe dieser Variable beinhaltet. Die Gründe dafür sind:
-> - Variablen verbrauchen Speicher. So soll der Speicher wieder freigegeben werden können, wenn diese nicht mehr gebraucht wird.
-> - ein zu großer Scope kann unter Umständen zu Wechselwirkungen führen (z.B. eine Methode verändert den Wert von der Variable A, während eine andere Methode A verwendet).
-
-Sollte der Scope zu klein sein: z.B. die Variable ist in einem Block definiert und das Programm versucht, diese im übergeordneten Block aufzurufen, so wird das Programm einen Fehler beim Compilieren auswerfen. (Siehe Beispiel weiter oben) 
-
-Wir deklarieren in unserem Beispiel die Variable `status` also in dem Block, der alle Aufrufe beinhaltet:
-
-### Java 
-
-```Java
-Scanner scanner = new Scanner(System.in);
-int amount = scanner.nextInt();
-String status = "";
-
-if (amount == 250) {
-   status = "full";
-} else if (amount == 125) {
-    status = "half full";
-} else if (amount < 250) {
-   status = "not full anymore";
-} else {
-    status = "more than full";
+```csharp
+// Variable `number` ist nur im Bereich des IF-Statements sichtbar
+if (condition) {
+    int number = 10;
+    // Variable `number` kann hier verwendet werden
 }
 
-System.out.println("The glass is " + status + "!");
-
+// Hier ist die Variable `number` nicht mehr erreichbar und würde einen Fehler verursachen
 ```
 
-### C#
+Um die Variable in einem größeren Bereich sichtbar zu machen, muss sie außerhalb der geschweiften Klammern deklariert werden:
 
-```c#
-Console.WriteLine("Enter the amount: ");
-int amount = Convert.ToInt32(Console.ReadLine());
-string status = "";
-
-if (amount == 250) {
-   status = "full";
-} else if (amount == 125) {
-   status = "half full";
-} else if (amount < 250) {
-   status = "not full anymore";
-} else {
-   status = "more than full";
+```csharp
+// Variable `number` ist jetzt im gesamten Block sichtbar
+int number;
+if (condition) {
+    number = 10;
+    // Variable `number` kann hier verwendet werden
 }
 
-System.out.println("The glass is " + status);
+// Variable `number` kann hier immer noch verwendet werden
 ```
 
-Was war der Grund, warum wir die Ausgabe erst am Schluss machen und nicht in jedem If-Block ein Mal?
-
-So haben wir dafür gesorgt, dass wir die Ausgabe auch sehr einfach verändern können. 
-
-Angenommen, wir wollen folgenden Text ausgeben: `"The status of the glass is: " + status + "!"`. 
-
-Im Beispiel des vorigen Kapitels hatten wir in jedem If-Statement die Konsolenausgabe. Dort hätten wir den Text in jedem IF-Statement ändern müssen. 
-
-In der neuen Variante müssen wir den Text lediglich ein Mal am Schluss ändern. Das spart uns nicht nur Arbeit, sondern sorgt auch dafür, dass wir nirgendwo vergessen, den Text anzupassen (geringere Fehleranfälligkeit).
+> [!IMPORTANT] Es ist wichtig, den Scope von Variablen so zu steuern, dass sie nur dort sichtbar sind, wo sie benötigt werden. Dies verbessert die Lesbarkeit des Codes und vermeidet potenzielle Fehler durch den Zugriff auf undefinierte Variablen. 
 
 Zurück zur [Startseite](README.md)
