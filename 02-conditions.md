@@ -72,7 +72,7 @@ if (Bedingung1) {
 }
 ```
 
-### Erste IF-Anweisungen
+### IF-Beispiele
 
 Wir wollen ein Programm schreiben, das entscheidet, ob ein Glas voll, nicht mehr voll oder halb voll ist:
 - Bei 250 ml ist das Glas voll
@@ -90,6 +90,8 @@ if (amount == 250) {
    System.out.println("The glass is half full!");
 } else if (amount < 250) {
    System.out.println("The glass is not full anymore!");
+} else {
+   System.out.println("The glass is more than full!");
 }
 ```
 
@@ -100,43 +102,7 @@ int amount = Convert.ToInt32(Console.ReadLine());
 
 if (amount == 250) {
    Console.WriteLine("The glass is full!");
-} else if (amount == 125) {
-   Console.WriteLine("The glass is half full!");
-} else if (amount < 250) {
-   Console.WriteLine("The glass is not full anymore!");
-}
-```
-
-### Sind alle möglichen Fälle wirklich abgedeckt?
-
-Jetzt fällt uns auf, dass eine Zahl über 250 zu keiner Ausgabe führt. Uns fehlt also noch eine Bedingung:
-
-#### Java 
-
-```Java
-Scanner scanner = new Scanner(System.in);
-int amount = scanner.nextInt();
-
-if (amount == 250) {
-   System.out.println("The glass is full!");
-} else if (amount == 125) {
-   System.out.println("The glass is half full!");
-} else if (amount < 250) {
-   System.out.println("The glass is not full anymore!");
-} else {
-   System.out.println("The glass is more than full!");
-}
-```
-
-#### C#
-
-```c#
-Console.WriteLine("Enter the amount: ");
-int amount = Convert.ToInt32(Console.ReadLine());
-
-if (amount == 250) {
-   Console.WriteLine("The glass is full!");
-} else if (amount == 125) {
+} else if (amount == 125) { // ACHTUNG! die Bedingung '== 125' muss vor '< 250' geprüft werden, ansonsten greift immer nur '< 250'
    Console.WriteLine("The glass is half full!");
 } else if (amount < 250) {
    Console.WriteLine("The glass is not full anymore!");
@@ -145,15 +111,14 @@ if (amount == 250) {
 }
 ```
 
-Jetzt deckt unser Programm alle Fälle ab und ist soweit optimiert, dass möglichst wenige Bedingungen geprüft werden. Wir sind fürs Erste fertig.
+Jetzt deckt unser Programm alle Fälle ab und ist soweit optimiert, dass möglichst wenige Bedingungen geprüft werden.
 
-## Die komprimierte Version von WENN-Anweisungen
+## Die komprimierte Version von IF-Anweisungen
 
-Stellen Sie sich vor, sie sollen Codezeilen sparen und die DANN- und SONST-Anweisungen befüllen dieselbe Variable. Unter anderem für diesen speziellen Fall gibt es den **ternären Operator**.
-
-#### Java 
+Stellen Sie sich vor, sie sollen Codezeilen sparen und die IF- und ELSE-Anweisungen befüllen dieselbe Variable. Unter anderem für diesen speziellen Fall gibt es den **ternären Operator**.
 
 ```Java
+// Java
 public static void main(String[] args) {
    Scanner scanner = new Scanner(System.in);
    int age = scanner.nextInt();
@@ -164,9 +129,8 @@ public static void main(String[] args) {
 
 ```
 
-#### C#
-
-```c#
+```csharp
+// C#
 Console.WriteLine("Enter the age: ");
 int age = Convert.ToInt32(Console.ReadLine());
 
@@ -174,117 +138,53 @@ string ageState = age > 18 ? "adult" : "underage";
 Console.WriteLine(ageState);
 ```
 
-***ageState = age > 18 ? "adult" : "underage"*** besteht aus folgenden Elementen:
-- ***ageState = <Ausdruck>***: die Variable **ageState** bekommt den Ergebniswert von <Ausdruck> zugewiesen
-- ***age > 18*** stellt die zu prüfende Bedingung dar
-- ***?*** könnte man als das Fragezeichen am Ende der Bedingung verstehen. Also die Bedingung wird davor gesetzt und danach kommen jene Anweisungen, die je nach Fall ausgeführt werden sollen.
-- ***"adult"*** ist der Wert, der ausgegeben wird, wenn die Bedingung wahr ist
-- ***:*** trennt die beiden möglichen Ergebnisse: wenn bedingung wahr bzw. falsch ist.
-- ***"underage"*** ist der Wert, der ausgegeben wird, wenn die Bedingung falsch ist.
+`ageState = age > 18 ? "adult" : "underage"` besteht aus folgenden Elementen:
+- `ageState = <Ausdruck>`: die Variable **ageState** bekommt den Ergebniswert von <Ausdruck> zugewiesen
+- `age > 18` stellt die zu prüfende Bedingung dar
+- `?` könnte man als das Fragezeichen am Ende der Bedingung verstehen. Also die Bedingung wird davor gesetzt und danach kommen jene Anweisungen, die je nach Fall ausgeführt werden sollen.
+- `"adult"` ist der Wert, der ausgegeben wird, wenn die Bedingung wahr ist
+- `:` trennt die beiden möglichen Ergebnisse: wenn bedingung wahr bzw. falsch ist.
+- `"underage"` ist der Wert, der ausgegeben wird, wenn die Bedingung falsch ist.
 
 Diese komprimierte Version ist aufgrund der schlechteren Lesbarkeit jedoch sparsam zu verwenden.
 
-## Mehrfache Verzweigung
+## `switch` Anweisung
 
 Darf eine Variable eine bestimmte Anzahl an Werten annehmen und je nach Wert wird ein anderer Code ausgeführt, würde man es natürlich mit verschachtelten WENNs zwar lösen können, so eine Verschachtelung wird aber sehr schnell unübersichtlich. Dafür gibt es die mehrfache Verzweigung. 
 
-In Pseudocode formuliert, würde es folgendermaßen aussehen:
+Die `switch`-Anweisung wird verwendet, wenn Sie eine Variable haben und basierend auf ihrem Wert verschiedene Aktionen durchführen möchten. Es ist eine prägnante Möglichkeit, mehrere Bedingungen zu behandeln:
 
-```
-falls <Ausdruck> gleich:
-  <Wert 1>: <Anweisung(en) 1>
-  <Wert 2>: <Anweisung(en) 2>
-  <Wert 3>: <Anweisung(en) 3>
-  <Wert 4>: <Anweisung(en) 4>
-  sonst: <Anweisung(en) 5>
-Ende
-```
-
-Also falls `<Ausdruck>` `<Wert 1>` annimmt, führe `<Anweisung(en) 1>` aus bzw. `<Wert 2>`, führe `<Anweisung(en) 2>` aus bzw. `<Wert 3>` ...
-
-`<Ausdruck>` kann hier im einfachsten Falle eine Variable sein, die verschiedene Werte annehmen darf oder eine Operation, die idealerweise mehr als 2 mögliche Werte annehmen darf.
-
-Zu erwähnen ist, dass <Wert 1>, <Wert 2>, ... den Rückgabewert des Ausdruckes darstellen! Es kann also Werte oder das Ergebnis von Operationen wie a + b sein (zB eine Zahl, einen String, ...).
-
-Das bedeutet auch, dass im Gegensatz zur WENN-Anweisung keine Bedingungen wie: i > 5, die einen boolschen Wert ergeben, erlaubt sind, da diese sich nicht direkt auf den `<Ausdruck>` beziehen.
-
-#### Java 
-
-```Java
-switch (Variable){
-   case Wert1: 
-      // Code, der ausgeführt wird, wenn Variable gleich Wert1 ist
-      break;
-   case Wert2: 
-      // Code, der ausgeführt wird, wenn Variable gleich Wert2 ist
-      break;
-   default: 
-      // Code, der ausgeführt wird, wenn Variable zu keinem Fall passt
+```java
+// Java
+switch (Variable) {
+    case Wert1:
+        // Code, der ausgeführt wird, wenn Variable gleich Wert1 ist
+        break;
+    case Wert2:
+        // Code, der ausgeführt wird, wenn Variable gleich Wert2 ist
+        break;
+    default:
+        // Code, der ausgeführt wird, wenn Variable zu keinem Fall passt
 }
 ```
 
-#### C#
-
-```c#
-switch (Variable){
-   case Wert1: 
-      // Code, der ausgeführt wird, wenn Variable gleich Wert1 ist
-      break;
-   case Wert2: 
-      // Code, der ausgeführt wird, wenn Variable gleich Wert2 ist
-      break;
-   default: 
-      // Code, der ausgeführt wird, wenn Variable zu keinem Fall passt
+```csharp
+// C#
+switch (Variable) {
+    case Wert1:
+        // Code, der ausgeführt wird, wenn Variable gleich Wert1 ist
+        break;
+    case Wert2:
+        // Code, der ausgeführt wird, wenn Variable gleich Wert2 ist
+        break;
+    default:
+        // Code, der ausgeführt wird, wenn Variable zu keinem Fall passt
+        break;
 }
 ```
 
-In einem switch-statement sind folgende Schlüsselwörter zu beachten:
-- `switch`: öffnet den Block der mehrfachen Verzweigung. Unmittelbar danach ist der `<Ausdruck>` zu finden.
-- `case`: startet den Block eines Anwendungsfalls. Direkt danach folgt das Kriterium für die Auswahl dieses Falles. 
-- `break`: wird verwendet, um die switch-Anweisung zu verlassen, nachdem ein Fall übereinstimmt. 
-- `default`: sollte keiner der Werte `<Ausdruck>` entsprechen, wird der darauffolgender Code-Teil ausgeführt. Dieses Schlüsselwort ist optional. Dieser Code-Teil benötigt keinen `break`, da er am Schluss ist.
+In sowohl Java als auch C# wird die `break`-Anweisung verwendet, um die `switch`-Anweisung zu verlassen, nachdem ein Fall übereinstimmt.
 
 Diese bedingten Anweisungen sind leistungsstarke Werkzeuge in der Programmierung und ermöglichen es Ihnen, den Ablauf Ihres Codes basierend auf verschiedenen Bedingungen zu steuern.
-
-### Mehrfache Ausdrücke und Gruppierung von Kriterien
-
-Seit JDK 12 können mehrere Kriterien nach einem ***case*** vorkommen, getrennt durch einen Beistrich.
-
-Seit JDK 13 stehen auch sogennante **switch-Ausdrücke** zur Verfügung. Der Vorteil darin ist, dass kein ***break*** mehr benötigt wird.
-Hierfür ändert sich die Notation. Statt dem ***:*** nach dem gesuchten Wert werden ***->*** verwendet. Diese müssen mit ***,*** getrennt werden.
-
-Wichtig ist zu wissen, dass **switch-Ausdrücke** **alle möglichen Kriterien/Werte abdecken müssen** (entweder mit einem default-Block oder die case-Blöcke decken alles ab), während switch-Statements durchaus Kriterien/Werte auslassen können.
-
-Auch neu mit den switch-Expressions ist das Schlüsselwort ***yield*** statt ***return***. Damit kann der ***case***-Block einen Wert zurückgeben. 
-
-[Pattern-Matching](https://docs.oracle.com/en/java/javase/17/language/pattern-matching-switch-expressions-and-statements.html#GUID-E69EEA63-E204-41B4-AA7F-D58B26A3B232) wird in dieser Anleitung bewusst ausgelassen, da derzeit nicht sinnvoll. Sollte Interesse bestehen, könnte ihr euch einlesen.
-
-#### Java 
-
-```Java
-public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    int grade = scanner.nextInt();
-
-    String gradeDescription = switch (grade){
-        case 1 -> yield "Sehr gut";
-        case 2 -> yield "Gut"; 
-        case 3 -> yield "Befriedigend"; 
-        case 4 -> yield "Genügend"; 
-        case 5 -> yield "Nicht Genügend"; 
-        default -> yield "Ist keine Note!";
-   }
-
-   System.out.println("Your grade ist: " + gradeDescription + "!");
-}
-```
-
-#### C#
-
-```c#
-
-```
-
-
 
 Zurück zur [Startseite](README.md)
