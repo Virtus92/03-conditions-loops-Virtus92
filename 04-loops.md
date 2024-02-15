@@ -15,17 +15,21 @@ Zwei weitere wichtige Befehle, die in Schleifen verwendet werden:
   - wenn der Codeteil mindestens einmal ausgeführt werden muss: ***führe folgende <Anweisungen> durch, solange <Bedingung> erfüllt ist***. Hier werden die Anweisungen mindestens 1 Mal ausgeführt.
   - wenn die Bedingung zuerst geprüft werden muss, bevor der Codeteil ausgeführt wird (also kann es sein, dass der Codeteil kein einziges Mal ausgeführt wird): ***Solange <Bedingung> erfüllt ist, führe folgende <Anweisungen> durch***
 
-## führe <Anweisungen> <x> Mal durch: `for`-Schleife
+## `for`-Schleife
 
-Wenn die Anzahl der Iterationen vorm Start der Schleife bekannt ist, verwenden wir: ***für (<start>; <Ende-Bedingung>; <Inkrementer>)***, wobei ***<start>*** der erste Wert der Wiederholungen darstellt, ***<Ende-Bedingung>*** die Bedingung darstellt, welche die Schleife beendet und ***<Inkrementer>*** die Formel ist, wie sich der Wert bei jeder Iteration ändern soll, um irgendwann die ***<Ende-Bedingung>*** zu erfüllen. Hier ist eine Endlosschleife ausgeschlossen, außer die Iterator-Variable wird innerhalb der Schleife entsprechend manipuliert.
+Wenn die Anzahl der Iterationen vorm Start der Schleife bekannt ist, verwenden wir: ***for (<start>; <Ende-Bedingung>; <Inkrementer>)***, wobei:
+- ***<start>*** der erste Wert der Wiederholungen darstellt, 
+- ***<Ende-Bedingung>*** die Bedingung darstellt, welche die Schleife beendet und 
+- ***<Inkrementer>*** die Formel ist, wie sich der Wert bei jeder Iteration ändern soll, um irgendwann die ***<Ende-Bedingung>*** zu erfüllen. 
+Hier ist eine Endlosschleife ausgeschlossen, außer die Iterator-Variable wird innerhalb der Schleife entsprechend manipuliert.
 
 ### Beispiel
 
 Hier ein Beispiel, das den Benutzer auffordert, eine Zahl einzugeben, und dann die geraden Zahlen von 0 bis zur eingegebenen Zahl ausgibt:
 
-#### Java 
-
 ```Java
+// Java
+
 import java.util.Scanner;
 
 public class Main {
@@ -43,9 +47,9 @@ public class Main {
 }
 ```
 
-#### C#
+```csharp
+// C#
 
-```c#
 using System;
 
 class MainClass {
@@ -62,19 +66,19 @@ class MainClass {
 }
 ```
 
-## für jedes <Element> eines <Objekts>, führe <Anweisungen> durch: `foreach`-Schleife
+## `foreach`-Schleife
 
-Wenn eine Liste durchiteriert werden soll, der eine definiterte Anzahl an Elementen beinhaltet, der vollständig durchlaufen werden soll, z.B. eine Liste: ***für jedes(<Listenelement> in <Liste>)***. Diesen Datentyp haben wir noch nicht kennengelernt, jedoch präsentieren wir diese Schleife hier, um den Kontext der Schleifen zu bewahren. Wenn man alle Elemente einer solchen Variable durchlaufen möchte, steht uns eine spezielle for-Schleife zur Verfügung: die **`foreach`-Schleife**. Bedingt durch das Listen-Objekt ist auch diese Schleife aus denselben Gründen wie die for-Schleife davor "geschützt", endlos zu iterieren.
+Wenn eine Liste von Elementen durchiteriert werden soll, der eine definiterte Anzahl an Elementen beinhaltet, z.B. eine Liste. Wenn man alle Elemente einer solchen Liste durchlaufen möchte, steht uns eine spezielle for-Schleife zur Verfügung: die **`foreach`-Schleife**. Bedingt durch das Listen-Objekt ist auch diese Schleife aus denselben Gründen wie die for-Schleife davor "geschützt", endlos zu iterieren.
 
 ### Beispiel
 
-Wir schreiben ein kleines Programm, das alle Elemente einer Liste ausgibt.
-
-#### Java 
+Ein Beispiel, das alle Elemente einer Liste ausgibt:
 
 In Java, im Gegensatz zu anderen Programmiersprachen, die den Befehl `foreach` verwenden, verwendet man den Befehl `for`. Nur der Inhalt der Klammern ist anders gestaltet.
 
 ```Java
+// Java 
+
 import java.util.List;
 import java.util.Arrays;
 
@@ -91,9 +95,10 @@ public class Main {
 }
 ```
 
-#### C#
 
-```c#
+```csharp
+// C#
+
 using System;
 using System.Collections.Generic;
 
@@ -110,17 +115,15 @@ class MainClass {
 }
 ```
 
-## Solange <Bedingung> führe durch <Anweisungen>: `while`-Schleife
+## `while`-Schleife
 
-Wenn man bestimmte <Anweisungen> ausführen soll, solange und nur dann wenn eine <Bedingung> erfüllt ist, steht uns die ***while-Schleife*** zur Verfügung. Wichtig ist anzumerken, dass bei dieser Variante die <Bedingung> zuerst geprüft wird, bevor der erste Durchlauf der <Anweisungen> ausgeführt. Also kann es vorkommen, dass die <Anweisungen> kein einziges Mal ausgeführt werden, wenn die <Bedingung> gleich erfüllt ist. Hier ist es wichtig, dass der\*die Entwickler\*in sicherstellt, dass die <Bedingung> eintreten wird, ansonsten könnte eine **Endlosschleife** entstehen!
+Wenn man bestimmte <Anweisungen> ausführen soll, solange und nur dann wenn eine <Bedingung> erfüllt ist, steht uns die ***while-Schleife*** zur Verfügung. Wichtig ist anzumerken, dass bei dieser Variante die <Bedingung> zuerst geprüft wird, bevor der erste Durchlauf der <Anweisungen> ausgeführt. Also kann es vorkommen, dass die <Anweisungen> kein einziges Mal ausgeführt werden, wenn die <Bedingung> gleich erfüllt ist. Hier muss der\*die Entwickler\*in sicherstellen, dass die <Bedingung> eintreten wird, ansonsten könnte eine **Endlosschleife** entstehen!
 
-### Beispiel
-
-Lösen wir das Beispiel oben mit einer while-Schleifen:
-
-#### Java 
+Lösen wir dasselbe Beispiel mit einer while-Schleife:
 
 ```Java
+// Java
+
 import java.util.List;
 import java.util.Arrays;
 
@@ -139,9 +142,10 @@ public class Main {
 }
 ```
 
-#### C#
 
-```c#
+```csharp
+// C#
+
 using System;
 using System.Collections.Generic;
 
@@ -162,17 +166,15 @@ class MainClass {
 }
 ```
 
-## führe durch <Anweisungen> solange <Bedingung>: `do...while`-Schleife
+## `do...while`-Schleife
 
-Die while-Schleife prüft die Bedingung zuerst, bevor die <Anweisungen> ausgeführt werden. In manchen Fällen ist es sinnvoller, die Bedingung erst nach der ersten Ausführung der <Anweisungen> zu prüfen.
+Die while-Schleife prüft die Bedingung zuerst, bevor die <Anweisungen> ausgeführt werden. In manchen Fällen ist es sinnvoller, die Bedingung erst nach der ersten Ausführung der <Anweisungen> zu prüfen. Hierfür steht uns die `do ... while`-Schleife zur Verfügung.
 
-### Beispiel
-
-Lösen wir das Beispiel oben mit einer while-Schleifen:
-
-#### Java 
+Lösen wir dasselbe Beispiel mit einer `do ... while`-Schleifen:
 
 ```Java
+// Java 
+
 import java.util.List;
 import java.util.Arrays;
 
@@ -191,9 +193,9 @@ public class Main {
 }
 ```
 
-#### C#
+```csharp
+// C#
 
-```c#
 using System;
 using System.Collections.Generic;
 
@@ -216,13 +218,11 @@ class MainClass {
 
 In manchen Fällen sollen nicht alle Anweisungen ausgeführt werden. Hierfür stellen uns Programmiersprache spezielle Befehle, welche die Schleife dazu zwingen, zurück zum Start zu springen. 
 
-### Beispiel
-
 Nehmen wir das Beispiel der for-Schleife her und lösen es, anders:
 
-#### Java 
+```java
+// Java
 
-```Java
 import java.util.Scanner;
 
 public static void main(String[] args) {
@@ -233,15 +233,15 @@ public static void main(String[] args) {
     System.out.print("Die geraden Zahlen von 0 bis " + number + " lauten: ");
 
     for (int i = 0; i <= number; i++){
-        if (i % 2 = 1) continue // hier wird der Befehl continue verwendet. Dieser besagt: überspringe den Rest der Anweisungen und springe sofort zur nächsten Iteration ==> Bei ungeraden Zahlen, überspringe den Rest der Iteration und springe gleich zur nächsten Iteration.
+        if (i % 2 = 1) continue // hier wird der Befehl continue verwendet. => Bei ungeraden Zahlen, überspringe den Rest der Iteration und springe gleich zur nächsten Iteration.
         System.out.print(i + ", ");
     }
 }
 ```
 
-#### C#
+```csharp
+// C#
 
-```c#
 using System;
 
 class MainClass {
@@ -261,15 +261,13 @@ class MainClass {
 
 ## eine Schleife abbrechen, bevor die Endbedingung erfüllt ist: `break`
 
-Sollte es notwendig sein, eine Schleife vorzeitig zu unterbrechen, stellen uns auch die Programmiersprachen einen Befehl dazu.
-
-### Beispiel
+Sollte es notwendig sein, eine Schleife vorzeitig zu unterbrechen, stellen uns auch die Programmiersprachen einen Befehl bereit.
 
 Erweitern wir das Beispiel der for-Schleife so, dass maximal die ersten 10 geraden Zahlen ausgegeben werden dürfen:
 
-#### Java 
-
 ```Java
+// Java
+
 import java.util.Scanner;
 
 public static void main(String[] args) {
@@ -290,9 +288,9 @@ public static void main(String[] args) {
 }
 ```
 
-#### C#
+```csharp
+// C#
 
-```c#
 using System;
 
 class MainClass {
@@ -313,4 +311,5 @@ class MainClass {
     }
 }
 ```
+
 Zurück zur [Startseite](README.md)
