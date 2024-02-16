@@ -117,7 +117,7 @@ class MainClass {
 
 ## `while`-Schleife
 
-Wenn man bestimmte <Anweisungen> ausführen soll, solange und nur dann wenn eine <Bedingung> erfüllt ist, steht uns die ***while-Schleife*** zur Verfügung. Wichtig ist anzumerken, dass bei dieser Variante die <Bedingung> zuerst geprüft wird, bevor der erste Durchlauf der <Anweisungen> ausgeführt. Also kann es vorkommen, dass die <Anweisungen> kein einziges Mal ausgeführt werden, wenn die <Bedingung> gleich erfüllt ist. Hier muss der\*die Entwickler\*in sicherstellen, dass die <Bedingung> eintreten wird, ansonsten könnte eine **Endlosschleife** entstehen!
+Wenn man bestimmte <Anweisungen> ausführen soll, solange und nur dann wenn eine <Bedingung> erfüllt ist, steht uns die ***while-Schleife*** zur Verfügung. Wichtig ist anzumerken, dass bei dieser Variante die <Bedingung> zuerst geprüft wird, bevor der erste Durchlauf der <Anweisungen> ausgeführt. Also kann es vorkommen, dass die <Anweisungen> kein einziges Mal ausgeführt werden, wenn die <Bedingung> gleich erfüllt ist. Hier muss der:die Entwickler:in sicherstellen, dass die <Bedingung> eintreten wird, ansonsten könnte eine **Endlosschleife** entstehen!
 
 Lösen wir dasselbe Beispiel mit einer while-Schleife:
 

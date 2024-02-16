@@ -200,7 +200,7 @@ Diese Operatoren sind wichtig, wenn Sie Bedingungen in Ihren Programmen erstelle
 
 Logische Operatoren werden verwendet, um Boolesche Werte zu kombinieren und Bedingungen zu erstellen, die auf mehreren Werten basieren. 
 
-Stellen wir uns vor, wir bieten den\*die Benutzer\*in Suchbegriffe in ein Suchfeld einzugeben. Wenn diese\*r mehrere Begriffe eingibt könnten wir definieren, dass:
+Stellen wir uns vor, wir bieten den:die Benutzer:in Suchbegriffe in ein Suchfeld einzugeben. Wenn diese:r mehrere Begriffe eingibt könnten wir definieren, dass:
 - entweder alle Begriffe enthalten sein müssen, so müssten wir den logischen Operator `&&` (Und) zwischen den Bedingungen verwenden
 - oder eines der Begriffe enthalten sein muss, so müssten wir den logischen Operator `||` (Oder) zwischen den Bedingungen verwenden
 - wenn nur eines der Begriffe enthalten sein muss, aber die anderen nicht wird der Operator `^` (exklusiv Oder) zwischen den Bedingungen verwendet

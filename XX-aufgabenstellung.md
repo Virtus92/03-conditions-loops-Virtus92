@@ -27,10 +27,10 @@ Write a program that reads a number from the console and calculates and prints t
 
 #### Abnahmekriterien
 
-- die Benutzer\*innenführung ist klar
+- die Benutzer:innenführung ist klar
 - die Variablennamen sind aussagekräftig
 - das Programm funktioniert und entspricht den Anforderungen
-- der\*die Teilnehmer\*in ist in der Lage sein\*ihr Programm zu erklären
+- der:die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären
 
 ### Übung/Exercise 2.2: Arbeits- oder Freizeit? / free time or work time?
 
@@ -51,7 +51,7 @@ Bonus: We go for a lunch break between 12 and 13 o'clock, print that info in cas
 - die Variablennamen sind aussagekräftig
 - die Start- und Endezeit sind als Datum gespeichert und für Vergleiche werden Datum-Methoden verwendet
 - das Programm funktioniert und löst die geforderten Aufgaben
-- der\*die Teilnehmer\*in ist in der Lage sein\*ihr Programm zu erklären
+- der:die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären
 
 ## Bedingungen
 
@@ -81,7 +81,7 @@ Write a program that translates grades from its numerical form to a word represe
 
 - Variablenname sind aussagekräftig und der Datentyp sinnvoll gewählt
 - das Programm funktioniert und bildet alle angeforderten Punkte korrekt ab
-- der\*die Teilnehmer\*in ist in der Lage sein\*ihr Programm zu erklären und warum er\*sie es so gelöst hat (switch wäre hier die bessere Variante)
+- der:die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären und warum er:sie es so gelöst hat (switch wäre hier die bessere Variante)
 
 ## Schleifen
 
@@ -108,7 +108,7 @@ Write a program, that prints the numbers from 1 to 100 by those rules. You don't
 - Variablennamen sind aussagekräftig und Datentypen sind sinnvoll gewählt
 - Benutzerführung klar, sofern vorhanden 
 - das Programm funktioniert und bildet alle angeforderten Punkte korrekt ab
-- der\*die Teilnehmer\*in ist in der Lage sein\*ihr Programm zu erklären und warum er\*sie es so gelöst hat (hier ist eine for-Schleife am sinnvollsten, auch wenn man while verwenden kann)
+- der:die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären und warum er:sie es so gelöst hat (hier ist eine for-Schleife am sinnvollsten, auch wenn man while verwenden kann)
 
 ### Übung/Exercise 2.5: Das kleine Einmal-Eins
 
@@ -151,7 +151,7 @@ times 2:
 - Variablennamen sind aussagekräftig und Datentypen sind sinnvoll gewählt
 - Benutzerführung klar, sofern vorhanden 
 - das Programm funktioniert und bildet alle angeforderten Punkte korrekt ab
-- der\*die Teilnehmer\*in ist in der Lage sein\*ihr Programm zu erklären und warum er\*sie es so gelöst hat (hier sind verschachtelte for-Schleifen am sinnvollsten, auch wenn man while-Schleifen verwenden könnte)
+- der:die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären und warum er:sie es so gelöst hat (hier sind verschachtelte for-Schleifen am sinnvollsten, auch wenn man while-Schleifen verwenden könnte)
 
 ### Übung/Exercise 2.6: Caesar Chiffre
 
@@ -217,7 +217,7 @@ Write a program that reads any text from the console, generates a key between 1 
 - Benutzerführung klar, sofern vorhanden 
 - getrennte Speicher von Klartext und verschlüsselter Text, um Vergleich nach Entschlüsselung zu erlauben
 - das Programm funktioniert und bildet alle angeforderten Punkte korrekt ab
-- der\*die Teilnehmer\*in ist in der Lage sein\*ihr Programm zu erklären und warum er\*sie es so gelöst hat (hier ist eine for-Schleife am sinnvollsten, auch wenn man eine while-Schleife verwenden könnte)
+- der:die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären und warum er:sie es so gelöst hat (hier ist eine for-Schleife am sinnvollsten, auch wenn man eine while-Schleife verwenden könnte)
 
 ## Arrays
 
@@ -235,8 +235,8 @@ Provide a program that reads numbers from the console until it reads the letter 
 
 - Variablennamen sind aussagekräftig und Datentypen sind sinnvoll gewählt
 - Benutzerführung klar, sofern vorhanden 
-- Da die Teilnehmer\*innen Listen noch nicht kennengelernt haben, reicht es, wenn der eingegebene Wert nach Vergleich und Speicherung des Maximums überschrieben wird.
+- Da die Teilnehmer:innen Listen noch nicht kennengelernt haben, reicht es, wenn der eingegebene Wert nach Vergleich und Speicherung des Maximums überschrieben wird.
 - das Programm funktioniert und bildet alle angeforderten Punkte korrekt ab
-- der\*die Teilnehmer\*in ist in der Lage sein\*ihr Programm zu erklären und warum er\*sie es so gelöst hat (hier ist eine for-Schleife am sinnvollsten, auch wenn man eine while-Schleife verwenden könnte)
+- der:die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären und warum er:sie es so gelöst hat (hier ist eine for-Schleife am sinnvollsten, auch wenn man eine while-Schleife verwenden könnte)
 
 Zurück zur [Startseite](README.md)

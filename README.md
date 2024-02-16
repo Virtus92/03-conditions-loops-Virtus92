@@ -2,7 +2,7 @@
 
 ## Lernziele
 
-Nach erfolgreicher Absolvierung dieses Themas können die Teilnehmer\*innen:
+Nach erfolgreicher Absolvierung dieses Themas können die Teilnehmer:innen:
 
 - Erläutern, was arithmetische, relationale und logische Operatoren sind.
 - Verstehen, was Bedingungen sind und wie sie funktionieren.
