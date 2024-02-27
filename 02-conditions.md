@@ -109,7 +109,7 @@ if (amount == 250) {
 }
 ```
 
-Jetzt deckt unser Programm alle Fälle ab und ist soweit optimiert, dass möglichst wenige Bedingungen geprüft werden.
+Wie im Kommentar erklärt, muss man auf die Reihenfolge der Bedingungen achten, ansonsten könnte es passieren, dass ein Zweig niemals erreicht werden kann.
 
 ## Die komprimierte Version von IF-Anweisungen
 
