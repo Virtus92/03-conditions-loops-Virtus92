@@ -149,7 +149,7 @@ a--;
 
 ## Relationale Operatoren (Vergleichsoperatoren)
 
-In der Programmierung werden relationale Operatoren verwendet, um Werte zu vergleichen. Diese Operatoren geben in der Regel einen booleschen Wert (`true` oder `false`) zurück.
+In der Programmierung werden relationale Operatoren verwendet, um die Beziehung zwischen Werten darzustellen. Diese Operatoren geben in der Regel einen booleschen Wert (`true` oder `false`) zurück.
 
 Hier sind die häufigsten relationalen Operatoren:
 
