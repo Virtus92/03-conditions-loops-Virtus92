@@ -8,24 +8,25 @@ Höhere Programmiersprachen bieten verschiedene Arten von Schleifen, um diese Au
 1. **While-Schleife (while)**: Führt den Codeblock aus, solange eine Bedingung erfüllt ist. Es gibt zwei Varianten: `do [...] while` (wird mindestens einmal ausgeführt) und `while` (die Bedingung wird zuerst überprüft).
 
 Zwei weitere wichtige Befehle, die in Schleifen verwendet werden:
-- **Abbruchbefehl**: Mit dem Befehl `break` kann eine Schleife unterbrochen werden. Die Ausführung sprint automatisch zum Code nach der Schleife hin.
-- **Überspringbefehl**: Mit dem Befehl `continue` kann zur nächsten Iteration in einer Schleife "gesprungen" werden. Also der Code unterhalb von `continue` in der Schleife wird übersprungen.
+- **Abbruchbefehl**: Mit dem Befehl `break` kann eine Schleife abgebrochen werden. Die Programmausfürhung wird sofort nach der Schleife fortgesetzt.
+- **Überspringbefehl**: Die Anweisung `continue` bewirkt im Gegensatz zu `break`, dass lediglich der aktuelle Schleifendurchlauf (und nicht die vollständige Schleife) an der Stelle der Anweisung verlassen und der Programmablauf dann mit dem nächsten Schleifendurchlauf fortgesetzt wird.
 
-- wenn es sich um einen Codeteil handelt, der so oft wiederholt werden soll, bis eine Bedingung erfüllt ist. Hier stehen uns 2 Varianten zur Verfügung:
-  - wenn der Codeteil mindestens einmal ausgeführt werden muss: ***führe folgende Anweisungen durch, solange Bedingung erfüllt ist***. Hier werden die Anweisungen mindestens 1 Mal ausgeführt.
-  - wenn die Bedingung zuerst geprüft werden muss, bevor der Codeteil ausgeführt wird (also kann es sein, dass der Codeteil kein einziges Mal ausgeführt wird): ***Solange Bedingung erfüllt ist, führe folgende Anweisungen durch***
+- Sollte es sich um einen Codeteil handeln, der so oft wiederholt werden soll, bis eine Bedingung erfüllt ist, stehen uns hier 2 Varianten zur Verfügung:
+  - Wenn der Codeteil mindestens einmal ausgeführt werden muss: ***führe folgende Anweisungen durch, solange Bedingung erfüllt ist*** ( `do [...] while`). Hier werden die Anweisungen mindestens 1 Mal ausgeführt.
+  - Wenn die Bedingung zuerst geprüft werden muss, bevor der Codeteil ausgeführt wird (also kann es sein, dass der Codeteil kein einziges Mal ausgeführt wird): ***Solange Bedingung erfüllt ist, führe folgende Anweisungen durch*** (`while`)
 
 ## `for`-Schleife
 
-Wenn die Anzahl der Iterationen vorm Start der Schleife bekannt ist, verwenden wir: ***for (start; Ende-Bedingung; Inkrementer)***, wobei:
-- ***start***: Stellt den erste Wert der Wiederholungen dar.
-- ***Ende-Bedingung***: Stellt die Bedingung dar, welche die Schleife beendet.
-- ***Inkrementer***: Ist die Formel, wie sich der Wert bei jeder Iteration ändern soll, um irgendwann die ***Ende-Bedingung*** zu erfüllen. 
-Hier ist eine Endlosschleife ausgeschlossen, außer die Iterator-Variable wird innerhalb der Schleife entsprechend manipuliert.
+Wenn die Anzahl der Iterationen vorm Start der Schleife bekannt ist, verwenden wir eine `for`-Schleife. Der Schleifenkopf besteht aus: ***for (Zählvariable; Abbruchbedingung; Inkrementer/Dekrementer)***, wobei:
+- ***Zählvariable***: Stellt den Beginn der Wiederholungen dar (`int i = 0`).
+- ***Abbruchbedingung***: Stellt die Bedingung dar, welche die Schleife beendet (`i < 10`).
+- ***Inkrementer/Dekrementer***: Ist die Formel, welche den Wert der Zählvariable bei jeder Iteration ändern soll, um irgendwann die ***Abbruchbedingung*** zu erfüllen (`i++` oder `i--`).
+- Semikola trennen die Ausdrücke innerhalb des Schleifenkopfs. 
+Vorsicht: Werden die Hauptbestandteile des Schleifenkopfs falsch gewählt, kann es zu einer Endlosschleife (=endlose Anzahl an Wiederholungen bis hin zu Speicherüberlauf und Programmabsturz) kommen.
 
 ### Beispiel
 
-Hier ein Beispiel, das den Benutzer auffordert, eine Zahl einzugeben, und dann die geraden Zahlen von 0 bis zur eingegebenen Zahl ausgibt:
+Hier ein Beispiel, das den Benutzer auffordert, eine Zahl einzugeben, um dann die geraden Zahlen von 0 bis zur eingegebenen Zahl auszugeben:
 
 ```Java
 // Java
@@ -68,13 +69,13 @@ class MainClass {
 
 ## `foreach`-Schleife
 
-Wenn eine Liste von Elementen durchiteriert werden soll, der eine definiterte Anzahl an Elementen beinhaltet, z.B. eine Liste, verwendet man am besten eine `foreach`-Schleife. Bedingt durch das Listen-Objekt ist auch diese Schleife aus denselben Gründen wie die `for`-Schleife davor "geschützt", endlos zu iterieren.
+Wenn zum Beispiel eine Liste von Elementen durchiteriert werden soll, verwendet man am besten eine `foreach`-Schleife. Bedingt durch das Listen-Objekt mit einer finiten Anzahl an Elementen, ist es bei der `foreach`-Schleife unmöglich, eine Endlosschleife zu produzieren. Die Anzahl der beinhalteten Elemente stellt immer die Abbruchbedingung der Schleife dar.
 
 ### Beispiel
 
 Ein Beispiel, das alle Elemente einer Liste ausgibt:
 
-In Java, im Gegensatz zu anderen Programmiersprachen, die den Befehl `foreach` verwenden, verwendet man den Befehl `for`. Nur der Inhalt der Klammern ist anders gestaltet.
+In Java, im Gegensatz zu anderen Programmiersprachen, die den Befehl `foreach` verwenden, verwendet man den Befehl `for`. Anstatt `in` verwendet Java den Befehl `:` im Schleifenkopf, wie in den folgenden Beispielen gut ersichtlich ist.
 
 ```Java
 // Java 
@@ -88,7 +89,7 @@ public class Main {
 
         System.out.print("Die Elemente von list lauten: ");
 
-        for (String character : list) { // für jedes Element von list, erstelle ein Element `character` und verwende dieses im Code der Schleife
+        for (String character : list) { // für jedes Element in der Liste list, erstelle ein Stringelement `character` und verwende dieses im Code der Schleife
             System.out.print("'" + character + "', ");
         }
     }
@@ -117,7 +118,8 @@ class MainClass {
 
 ## `while`-Schleife
 
-Wenn man bestimmte Anweisungen ausführen soll, solange und nur dann wenn eine Bedingung erfüllt ist, steht uns die `while`-Schleife zur Verfügung. Wichtig ist anzumerken, dass bei dieser Variante die Bedingung zuerst geprüft wird, bevor der erste Durchlauf der Anweisungen startet. Also kann es vorkommen, dass die Anweisungen kein einziges Mal ausgeführt werden, wenn die Bedingung beim Ersten Durchlauf nicht erfüllt ist. Hier muss der:die Entwickler:in sicherstellen, dass die Bedingung eintreten wird, ansonsten könnte eine **Endlosschleife** entstehen!
+Wenn man bestimmte Anweisungen ausführen soll, solange und nur dann wenn eine Bedingung erfüllt ist, benutzt man eine `while`-Schleife. Diese Bedingung schreibt man in die runden Klammern. Wenn diese erfüllt ist, wird der Code, der sich innerhalb der geschweiften Klammern befindet, ausgeführt. Daraufhin wird überprüft, ob die Bedingung noch erfüllt ist. Sollte dass der Fall sein, springt unser Programm zum Anfang der Schleife zurück. Das passiert so lange, bis die Bedingung nicht mehr erfüllt ist. Danach läuft das Programm weiter durch den restlichen Code.
+Sollte die Bedingung immer erfüllt sein und damit die Abbruchbedingung niemals gegeben, kommt es logischerweise auch hier zu einer Endlosschleife.  
 
 Lösen wir dasselbe Beispiel mit einer while-Schleife:
 
@@ -214,9 +216,9 @@ class MainClass {
 }
 ```
 
-## Eine Iteration abbrechen und gleich zur nächsten Iteration springen: `continue`
+## Eine Iteration überspringen: `continue`
 
-In manchen Fällen sollen nicht alle Anweisungen ausgeführt werden. Hierfür stellen uns Programmiersprachen den Befehl `continue`, welcher die Schleife dazu zwingt, zurück zum Start zu springen. 
+In manchen Fällen sollen unter gewissen Umständen nicht alle Anweisungen ausgeführt werden. Hierfür stellen uns Programmiersprachen den Befehl `continue` zur Verfügung, welcher die Schleife dazu zwingt, in den nächsten Schleifendurchlauf zu springen. 
 
 Lösen wir das Beispiel der `for`-Schleife anders:
 
@@ -234,7 +236,7 @@ class MainClass{
         System.out.print("Die geraden Zahlen von 0 bis " + number + " lauten: ");
 
         for (int i = 0; i <= number; i++){
-            if (i % 2 = 1) continue // hier wird der Befehl continue verwendet. => Bei ungeraden Zahlen, überspringe den Rest der Iteration und springe gleich zur nächsten Iteration.
+            if (i % 2 = 1) continue // hier wird der Befehl continue verwendet. => Bei ungeraden Zahlen, überspringe den aktuellen Schleifendurchlauf und springe zum nächsten Schleifendurchlauf.
             System.out.print(i + ", ");
         }
     }
@@ -254,16 +256,16 @@ class MainClass {
         Console.Write($"Die geraden Zahlen von 0 bis {number} lauten: ");
 
         for (int i = 0; i <= number; i++) {
-            if (i % 2 == 1) continue; // Überspringe ungerade Zahlen
+            if (i % 2 == 1) continue; // hier wird der Befehl continue verwendet. => Bei ungeraden Zahlen, überspringe den aktuellen Schleifendurchlauf und springe zum nächsten Schleifendurchlauf.
             Console.Write(i + ", ");
         }
     }
 }
 ```
 
-## Eine Schleife abbrechen, bevor die Endbedingung erfüllt ist: `break`
+## Eine Schleife abbrechen, bevor die Abbruchbedingung erfüllt ist: `break`
 
-Sollte es notwendig sein, eine Schleife vorzeitig zu unterbrechen, stellen uns Programmiersprachen den Befehl `break` bereit.
+Sollte es notwendig sein, eine Schleife vorzeitig zu abzubrechen, stellen uns Programmiersprachen den Befehl `break` bereit.
 
 Erweitern wir das Beispiel der `for`-Schleife so, dass maximal die ersten 10 geraden Zahlen ausgegeben werden dürfen:
 
