@@ -70,7 +70,7 @@ if (Bedingung1) {
 }
 ```
 
-### IF-Beispiele
+### `if`-Beispiele
 
 Wir wollen ein Programm schreiben, das entscheidet, ob ein Glas voll, nicht mehr voll oder halb voll ist:
 - Bei 250 ml ist das Glas voll
@@ -111,9 +111,9 @@ if (amount == 250) {
 
 Wie im Kommentar erklärt, muss man auf die Reihenfolge der Bedingungen achten, ansonsten könnte es passieren, dass ein Zweig niemals erreicht werden kann.
 
-## Die komprimierte Version von IF-Anweisungen
+## Die komprimierte Version von `if`-Anweisungen
 
-Stellen Sie sich vor, sie sollen Codezeilen sparen und die IF- und ELSE-Anweisungen befüllen dieselbe Variable. Unter anderem für diesen speziellen Fall gibt es den **ternären Operator**.
+Stellen Sie sich vor, sie sollen Codezeilen sparen und die `if`- und `else`-Anweisungen befüllen dieselbe Variable. Unter anderem für diesen speziellen Fall gibt es den **ternären Operator**.
 
 ```Java
 // Java
@@ -137,7 +137,7 @@ Console.WriteLine(ageState);
 ```
 
 `ageState = age > 18 ? "adult" : "underage"` besteht aus folgenden Elementen:
-- `ageState = <Ausdruck>`: die Variable **ageState** bekommt den Ergebniswert von <Ausdruck> zugewiesen
+- `ageState = <Ausdruck>` die Variable **ageState** bekommt den Ergebniswert von <Ausdruck> zugewiesen
 - `age > 18` stellt die zu prüfende Bedingung dar
 - `?` könnte man als das Fragezeichen am Ende der Bedingung verstehen. Also die Bedingung wird davor gesetzt und danach kommen jene Anweisungen, die je nach Fall ausgeführt werden sollen.
 - `"adult"` ist der Wert, der ausgegeben wird, wenn die Bedingung wahr ist
@@ -148,7 +148,7 @@ Diese komprimierte Version ist aufgrund der schlechteren Lesbarkeit jedoch spars
 
 ## `switch` Anweisung
 
-Darf eine Variable eine bestimmte Anzahl an Werten annehmen und je nach Wert wird ein anderer Code ausgeführt, würde man es natürlich mit verschachtelten WENNs zwar lösen können, so eine Verschachtelung wird aber sehr schnell unübersichtlich. Dafür gibt es die mehrfache Verzweigung. 
+Darf eine Variable eine bestimmte Anzahl an Werten annehmen und je nach Wert wird ein anderer Code ausgeführt, würde man es natürlich mit verschachtelten `if`'s zwar lösen können, so eine Verschachtelung wird aber sehr schnell unübersichtlich. Dafür gibt es die mehrfache Verzweigung. 
 
 Die `switch`-Anweisung wird verwendet, wenn Sie eine Variable haben und basierend auf ihrem Wert verschiedene Aktionen durchführen möchten. Es ist eine prägnante Möglichkeit, mehrere Bedingungen zu behandeln:
 
