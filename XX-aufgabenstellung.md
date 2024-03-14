@@ -7,30 +7,30 @@
 **DE:**
 
 Schreibe ein Programm, das eine Zahl von der Konsole einliest und folgende Eigenschaften ausgibt:
-- ob es sich um eine runde Zahl handelt
-- ob die Zahl gerade ist
-- ob die Zahl deiner Glückszahl entspricht (denk dir hierfür einfach eine eigene Glückszahl aus und gib sie zu Beginn des Programms auf der Konsole aus)
-- ob die Zahl zweistellig ist
+- Ob es sich um eine runde Zahl handelt
+- Ob die Zahl gerade ist
+- Ob die Zahl deiner Glückszahl entspricht (denk dir hierfür einfach eine eigene Glückszahl aus und gib sie zu Beginn des Programms auf der Konsole aus)
+- Ob die Zahl zweistellig ist
 
 Tipp: Für die ersten beiden Punkte wirst du die Modulo Funktion brauchen. 
 
 ***EN:***
 
 Write a program that reads a number from the console and calculates and prints the following characteristics:
-- is the number round
-- is the number even
-- does the number equal your lucky number (choose any lucky number for this and print it to the console at the start of the program)
-- does it have two digits
+- Is the number round
+- Is the number even
+- Does the number equal your lucky number (choose any lucky number for this and print it to the console at the start of the program)
+- Does it have two digits
 
 *Hint*: You might find the modulo operation helpful for the first two exercises. 
 
 
 #### Abnahmekriterien
 
-- die Benutzer:innenführung ist klar
-- die Variablennamen sind aussagekräftig
-- das Programm funktioniert und entspricht den Anforderungen
-- der:die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären
+- Die Benutzer:innenführung ist klar
+- Die Variablennamen sind aussagekräftig
+- Das Programm funktioniert und entspricht den Anforderungen
+- Der:die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären
 
 ### Übung/Exercise 2.2: Arbeits- oder Freizeit? / free time or work time?
 
@@ -48,10 +48,10 @@ Bonus: We go for a lunch break between 12 and 13 o'clock, print that info in cas
 
 #### Abnahmekriterien
 
-- die Variablennamen sind aussagekräftig
-- die Start- und Endezeit sind als Datum gespeichert und für Vergleiche werden Datum-Methoden verwendet
-- das Programm funktioniert und löst die geforderten Aufgaben
-- der:die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären
+- Die Variablennamen sind aussagekräftig
+- Die Start- und Endezeit sind als Datum gespeichert und für Vergleiche werden Datum-Methoden verwendet
+- Das Programm funktioniert und löst die geforderten Aufgaben
+- Der:Die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären
 
 ## Bedingungen
 
@@ -80,8 +80,8 @@ Write a program that translates grades from its numerical form to a word represe
 #### Abnahmekriterien
 
 - Variablenname sind aussagekräftig und der Datentyp sinnvoll gewählt
-- das Programm funktioniert und bildet alle angeforderten Punkte korrekt ab
-- der:die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären und warum er:sie es so gelöst hat (switch wäre hier die bessere Variante)
+- Das Programm funktioniert und bildet alle angeforderten Punkte korrekt ab
+- Der:die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären und warum er:sie es so gelöst hat (switch wäre hier die bessere Variante)
 
 ## Schleifen
 
@@ -107,8 +107,8 @@ Write a program, that prints the numbers from 1 to 100 by those rules. You don't
 
 - Variablennamen sind aussagekräftig und Datentypen sind sinnvoll gewählt
 - Benutzerführung klar, sofern vorhanden 
-- das Programm funktioniert und bildet alle angeforderten Punkte korrekt ab
-- der:die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären und warum er:sie es so gelöst hat (hier ist eine for-Schleife am sinnvollsten, auch wenn man while verwenden kann)
+- Das Programm funktioniert und bildet alle angeforderten Punkte korrekt ab
+- Der:Die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären und warum er:sie es so gelöst hat (hier ist eine for-Schleife am sinnvollsten, auch wenn man while verwenden kann)
 
 ### Übung/Exercise 2.5: Das kleine Einmal-Eins
 
@@ -150,8 +150,8 @@ times 2:
 
 - Variablennamen sind aussagekräftig und Datentypen sind sinnvoll gewählt
 - Benutzerführung klar, sofern vorhanden 
-- das Programm funktioniert und bildet alle angeforderten Punkte korrekt ab
-- der:die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären und warum er:sie es so gelöst hat (hier sind verschachtelte for-Schleifen am sinnvollsten, auch wenn man while-Schleifen verwenden könnte)
+- Das Programm funktioniert und bildet alle angeforderten Punkte korrekt ab
+- Der:Die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären und warum er:sie es so gelöst hat (hier sind verschachtelte for-Schleifen am sinnvollsten, auch wenn man while-Schleifen verwenden könnte)
 
 ### Übung/Exercise 2.6: Caesar Chiffre
 
@@ -161,19 +161,19 @@ Wir wissen ja, dass jedes Zeichen in Java einen eindeutigen Code hat. Genauerges
 
 Die Caesar Chiffre ist ein simpler Verschlüsselungsalgorithmus bei dem alle Buchstaben um einen bestimmten offset X verschoben werden, erreichst du das Z solltest du wieder beim A starten, Sonderzeichen werden wir jetzt einmal auslassen.
 
-Mit einer Caesar Chiffre von 6 würde aus dem Text:
+Mit einer Caesar Chiffre von 6 wird aus dem Text
 
 ```
 Ein Charakter namens Caesar!
 ```
 
-folgendes werden:
+folgendes werden
 
 ```
 Kot Ingxgqzkx tgskty Igkygx!
 ```
 
-wenn wir diesen Text nochmal um 6 verschlüsseln würde aus dem Text:
+Wenn wir diesen Text nochmal um 6 verschlüsseln wird aus dem Text
 
 ```
 Quz Otmdmwfqd zmyqze Omqemd!
@@ -195,13 +195,13 @@ With a Caesar Chiffre of 6 the following text
 Ein Charakter namens Caesar!
 ```
 
-would be encrypted to:
+will be encrypted to
 
 ```
 Kot Ingxgqzkx tgskty Igkygx!
 ```
 
-when an encrypted again with a key of 6 we get:
+when encrypted again with a key of 6 we get
 
 ```
 Quz Otmdmwfqd zmyqze Omqemd!
@@ -215,9 +215,9 @@ Write a program that reads any text from the console, generates a key between 1 
 
 - Variablennamen sind aussagekräftig und Datentypen sind sinnvoll gewählt
 - Benutzerführung klar, sofern vorhanden 
-- getrennte Speicher von Klartext und verschlüsselter Text, um Vergleich nach Entschlüsselung zu erlauben
-- das Programm funktioniert und bildet alle angeforderten Punkte korrekt ab
-- der:die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären und warum er:sie es so gelöst hat (hier ist eine for-Schleife am sinnvollsten, auch wenn man eine while-Schleife verwenden könnte)
+- Getrennte Speicher von Klartext und verschlüsselter Text, um Vergleich nach Entschlüsselung zu erlauben
+- Das Programm funktioniert und bildet alle angeforderten Punkte korrekt ab
+- Der:Die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären und warum er:sie es so gelöst hat (hier ist eine for-Schleife am sinnvollsten, auch wenn man eine while-Schleife verwenden könnte)
 
 ## Arrays
 
@@ -236,7 +236,7 @@ Provide a program that reads numbers from the console until it reads the letter 
 - Variablennamen sind aussagekräftig und Datentypen sind sinnvoll gewählt
 - Benutzerführung klar, sofern vorhanden 
 - Da die Teilnehmer:innen Listen noch nicht kennengelernt haben, reicht es, wenn der eingegebene Wert nach Vergleich und Speicherung des Maximums überschrieben wird.
-- das Programm funktioniert und bildet alle angeforderten Punkte korrekt ab
-- der:die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären und warum er:sie es so gelöst hat (hier ist eine for-Schleife am sinnvollsten, auch wenn man eine while-Schleife verwenden könnte)
+- Das Programm funktioniert und bildet alle angeforderten Punkte korrekt ab
+- Der:Die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären und warum er:sie es so gelöst hat (hier ist eine for-Schleife am sinnvollsten, auch wenn man eine while-Schleife verwenden könnte)
 
 Zurück zur [Startseite](README.md)
