@@ -234,7 +234,7 @@ class MainClass{
         System.out.print("Die geraden Zahlen von 0 bis " + number + " lauten: ");
 
         for (int i = 0; i <= number; i++){
-            if (i % 2 = 1) continue // hier wird der Befehl continue verwendet. => Bei ungeraden Zahlen, überspringe den Rest der Iteration und springe gleich zur nächsten Iteration.
+            if (i % 2 == 1) continue; // hier wird der Befehl continue verwendet. => Bei ungeraden Zahlen, überspringe den Rest der Iteration und springe gleich zur nächsten Iteration.
             System.out.print(i + ", ");
         }
     }
