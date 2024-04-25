@@ -14,4 +14,4 @@ Darüber hinaus ist es oft erforderlich, dieselbe Verarbeitung für mehrere Wert
 
 In diesem Kapitel werden wir auch erklären, wie solche Wiederholungen in unseren Programmen umgesetzt werden sollen.
 
-Zurück zur [Startseite](README.md)
+Zurück zur [Startseite](../README.md)

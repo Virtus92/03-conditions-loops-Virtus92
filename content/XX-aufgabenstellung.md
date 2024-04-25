@@ -239,4 +239,4 @@ Provide a program that reads numbers from the console until it reads the letter 
 - Das Programm funktioniert und bildet alle angeforderten Punkte korrekt ab
 - Der:Die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären und warum er:sie es so gelöst hat (hier ist eine for-Schleife am sinnvollsten, auch wenn man eine while-Schleife verwenden könnte)
 
-Zurück zur [Startseite](README.md)
+Zurück zur [Startseite](../README.md)

@@ -185,4 +185,4 @@ In sowohl Java als auch C# wird die `break`-Anweisung verwendet, um die `switch`
 
 Diese bedingten Anweisungen sind leistungsstarke Werkzeuge in der Programmierung und ermöglichen es Ihnen, den Ablauf Ihres Codes basierend auf verschiedenen Bedingungen zu steuern.
 
-Zurück zur [Startseite](README.md)
+Zurück zur [Startseite](../README.md)

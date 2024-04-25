@@ -296,4 +296,4 @@ Die logischen Operatoren ermöglichen es, komplexe Bedingungen zu erstellen, ind
 
 Im folgenden Kapitel lernen wir wie solche Bedingungen erstellt werden.
 
-Zurück zur [Startseite](README.md)
+Zurück zur [Startseite](../README.md)

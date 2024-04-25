@@ -78,4 +78,4 @@ if (condition) {
 
 > [!IMPORTANT] Es ist wichtig, den Scope von Variablen so zu steuern, dass sie nur dort sichtbar sind, wo sie benötigt werden. Dies verbessert die Lesbarkeit des Codes und vermeidet potenzielle Fehler durch den Zugriff auf undefinierte Variablen. Weiters reduziert dies den Speicherverbrauch des Programms, da die Variable aus dem Speicher gelöscht wird, wenn das Ende des Scopes erreicht ist.
 
-Zurück zur [Startseite](README.md)
+Zurück zur [Startseite](../README.md)

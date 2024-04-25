@@ -12,9 +12,9 @@ Nach erfolgreicher Absolvierung dieses Themas können die Teilnehmer:innen:
 
 ## Inhaltsverzeichnis
 
-1. [Problemstellung](00-problemstellung.md)
-1. [Arithmetische, relationale und logische Operatoren](./01-operators.md)
-1. [Bedingte Ausführung](./02-conditions.md)
-1. [Erreichbarkeit von Variablen](./03-scope-of-variables.md)
-1. [Codeteile wiederholen mit Schleifen](./04-loops.md)
-1. [Aufgabenstellung](./XX-aufgabenstellung.md)
+1. [Problemstellung](content/00-problemstellung.md)
+1. [Arithmetische, relationale und logische Operatoren](content/01-operators.md)
+1. [Bedingte Ausführung](content/02-conditions.md)
+1. [Erreichbarkeit von Variablen](content/03-scope-of-variables.md)
+1. [Codeteile wiederholen mit Schleifen](content/04-loops.md)
+1. [Aufgabenstellung](content/XX-aufgabenstellung.md)
