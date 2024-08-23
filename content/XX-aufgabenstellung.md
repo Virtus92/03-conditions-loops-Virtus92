@@ -225,11 +225,15 @@ Write a program that reads any text from the console, generates a key between 1 
 
 **DE:**
 
-Schreibe ein kleines Programm, welches eine Liste von Zahlen über die Konsole zahlenweise einliest. Mit 'q' solltest du die Eingabe beenden können. Errechne dir danach aus der eben eingelesenen Liste das Maximum und gib es auf der Konsole aus. 
+Schreibe ein kleines Programm, welches eine Liste von Zahlen über die Konsole zeilenweise einliest und in ein Array speichert. Mit 'q' solltest du die Eingabe beenden können. Errechne dir danach aus der eben eingelesenen Liste das Maximum und gib es auf der Konsole aus.
+
+Welche Schwierigkeiten bereitet die Speicherung in ein Array?
 
 ***EN:***
 
-Provide a program that reads numbers from the console until it reads the letter 'q'. Calculate the maximum of all values and print it to the console.
+Provide a program that reads numbers from the console (each line one number) and saves them into an array until it reads the letter 'q'. Calculate the maximum of all values and print it to the console.
+
+Which difficulties do saving in an array causes?
 
 #### Abnahmekriterien
 
@@ -237,6 +241,6 @@ Provide a program that reads numbers from the console until it reads the letter 
 - Benutzerführung klar, sofern vorhanden 
 - Da die Teilnehmer:innen Listen noch nicht kennengelernt haben, reicht es, wenn der eingegebene Wert nach Vergleich und Speicherung des Maximums überschrieben wird.
 - Das Programm funktioniert und bildet alle angeforderten Punkte korrekt ab
-- Der:Die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären und warum er:sie es so gelöst hat (hier ist eine for-Schleife am sinnvollsten, auch wenn man eine while-Schleife verwenden könnte)
+- Der:Die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären und warum er:sie es so gelöst hat (hier ist eine for-Schleife für die Ermittlung des Maximums am sinnvollsten, auch wenn man eine while-Schleife verwenden könnte)
 
 Zurück zur [Startseite](../README.md)
