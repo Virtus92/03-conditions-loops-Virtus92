@@ -225,13 +225,13 @@ Write a program that reads any text from the console, generates a key between 1 
 
 **DE:**
 
-Schreibe ein kleines Programm, welches eine Liste von Zahlen über die Konsole zeilenweise einliest und in ein Array speichert. Mit 'q' solltest du die Eingabe beenden können. Errechne dir danach aus der eben eingelesenen Liste das Maximum und gib es auf der Konsole aus.
+Schreibe ein kleines Programm, welches eine Liste von Zahlen über die Konsole zeilenweise einliest und in ein Array speichert. Mit 'q' solltest du die Eingabe beenden können (es wird nicht im Vorfeld definiert, wie viele Zahlen eingegeben werden). Errechne dir danach aus der eben eingelesenen Liste das Maximum und gib es auf der Konsole aus.
 
 Welche Schwierigkeiten bereitet die Speicherung in ein Array?
 
 ***EN:***
 
-Provide a program that reads numbers from the console (each line one number) and saves them into an array until it reads the letter 'q'. Calculate the maximum of all values and print it to the console.
+Provide a program that reads numbers from the console (each line one number) and saves them into an array until it reads the letter 'q' (You don't define the number of numbers should be entered). Calculate the maximum of all values and print it to the console.
 
 Which difficulties do saving in an array causes?
 
