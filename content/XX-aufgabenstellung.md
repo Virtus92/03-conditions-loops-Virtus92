@@ -239,7 +239,6 @@ Which difficulties do saving in an array causes?
 
 - Variablennamen sind aussagekräftig und Datentypen sind sinnvoll gewählt
 - Benutzerführung klar, sofern vorhanden 
-- Da die Teilnehmer:innen Listen noch nicht kennengelernt haben, reicht es, wenn der eingegebene Wert nach Vergleich und Speicherung des Maximums überschrieben wird.
 - Das Programm funktioniert und bildet alle angeforderten Punkte korrekt ab
 - Der:Die Teilnehmer:in ist in der Lage sein:ihr Programm zu erklären und warum er:sie es so gelöst hat (hier ist eine for-Schleife für die Ermittlung des Maximums am sinnvollsten, auch wenn man eine while-Schleife verwenden könnte)
 
