@@ -24,12 +24,12 @@ public class MaximaCalculation {
             }
         }
 
-        //
-
-        int counter = Integer.MIN_VALUE;
+        int max = Integer.MIN_VALUE;
         for (int i=0; i<num.size(); i++) {
-            counter += num.get(i);
+            if (num.get(i)>max) {
+                max = num.get(i);
+            }
         }
-        System.out.println(counter);
+        System.out.println(max);
     }
 }
